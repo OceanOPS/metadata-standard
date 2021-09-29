@@ -1,0 +1,45 @@
+[
+{
+	"OceanOPS metadata": "GTS-ID",
+	"Database": "WMO.wmo (WMO.ptf_id)",
+	"Format": "7-digit WMO code format",
+	"Match": "n/a",
+	"CSV field": "WMO",
+	"Comment": "The identifier used to tag data sent on the Global Telecommunication System. Code for a given time window. Mandatory for GTS tracking. <strong>In the future, this field won't be available anymore since the system will allocate it automatically.</strong>",
+	"Level": "C",
+	"References": "",
+	"Argo": "platform_number",
+	"Glider": "wmo_platfrom_code",
+	"OceanSITES": "wmo_platfrom_code",
+	"SOT": "GTS-ID"
+},
+{
+	"OceanOPS metadata": "Platform serial number",
+	"Database": "PTF.PTF_HARDWARE.serial_ref",
+	"Format": "Free text",
+	"Match": "n/a",
+	"CSV field": "SERIAL NUMBER",
+	"Comment": "The serial number of the platform",
+	"Level": "O",
+	"References": "",
+	"Argo": "Highly desirable. float_serial_no",
+	"Glider": "Mandatory. GLIDER_SERIAL_NO",
+	"OceanSITES": "",
+	"SOT": "main device serial number"
+},
+{
+	"OceanOPS metadata": "Internal ID",
+	"Database": "PTF.PTF_IDENTIFIERS.internal_ref",
+	"Format": "Free text",
+	"Match": "n/a",
+	"CSV field": "ID",
+	"Comment": "The local identifier allocated by the program/institute which deploys and maintains the platform",
+	"Level": "O",
+	"References": "",
+	"Argo": "",
+	"Glider": "deployment_code",
+	"OceanSITES": "id",
+	"SOT": ""
+}
+]
+

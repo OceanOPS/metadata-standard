@@ -1,0 +1,1522 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width = device-width, initial-scale = 1">
+	<title>OceanOPS Metadata</title>
+   	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+   	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"	crossorigin="anonymous">
+	<script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v0.4.1/dist/bootstrap-toc.min.css">
+	<script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v0.4.1/dist/bootstrap-toc.min.js"></script>
+	
+	<style>
+		   	
+		@font-face {
+		    font-family: Montserrat-Regular;
+		    src: url('https://www.ocean-ops.org/static/fonts/Montserrat/Montserrat-Regular.ttf');
+		}
+		   	
+		@font-face {
+		    font-family: Montserrat-SemiBold;
+		    src: url('https://www.ocean-ops.org/static/fonts/Montserrat/Montserrat-SemiBold.ttf');
+		}
+		
+		@font-face {
+			font-family: futura_medium_condensed_bt;
+			src: url('https://www.ocean-ops.org/static/fonts/futura_medium_condensed_bt.ttf');
+		}
+
+		
+		body{
+			font-family: 'Montserrat-Regular', sans-serif;
+			font-size: 1.7em;
+        counter-reset: h2counter;
+		}
+
+		h1, h2, h3, h4 {
+			color: #031539;
+			margin-top: 40px;
+			font-family: Montserrat-Regular;
+		}
+		
+		h2{
+			color: #579fc9;
+			counter-reset: h3counter;
+		}
+		
+		h1{
+			counter-reset: h2counter;
+			letter-spacing: 0.7px;
+		}
+		
+		h3{
+			margin-bottom: 22px;
+			font-family: Montserrat-SemiBold;
+			counter-reset: h4counter;
+		}
+		
+		h4{
+			font-size: 20px;
+			margin-bottom: 20px;
+			font-family: Montserrat-SemiBold;
+		}
+		
+		h2:before {
+			content: counter(h2counter) ".\0000a0\0000a0";
+			counter-increment: h2counter;
+		}
+		h3:before {
+			content: counter(h2counter) "." counter(h3counter) ".\0000a0\0000a0";
+			counter-increment: h3counter;
+		}
+		h4:before {
+			content: counter(h2counter) "." counter(h3counter) "." counter(h4counter) ".\0000a0\0000a0";
+			counter-increment: h4counter;
+		}
+		
+		::marker {
+			font-weight: bold;
+			color: #1c1e21;
+		}
+		
+		a{
+			color: rgb(40,157,222);
+		}
+
+		ul{
+			list-style-type: square;
+		}
+
+		p{
+			text-align: justify;
+		}
+		
+		.paragraph-header {
+			font-family: Montserrat-Semibold;
+			color: #1c1e21;
+		}
+
+		.text-right {
+			text-align: right;
+		}
+
+		.url{
+			font-family: monospace;
+			padding: 2px 4px;
+			color: rgb(3,21,57);
+			background-color: rgba(137,165,190,0.2);
+			border-radius: 4px;
+		}
+
+		.navbar-default {
+			background-color: #fbfbfb;
+		}
+		
+		nav.navbar img{
+			max-height: 50px;
+			padding: 0px 2px 4px 2px;
+			margin-left: 4px;
+		}
+
+		nav#toc{
+			font-family: 'Roboto Condensed', sans-serif;
+		}
+
+		nav#toc .nav>li>a {
+			font-size: 1em;
+		}
+		nav#toc .nav .nav>li>a {
+			font-size: 0.8em;
+		}
+		nav#toc .nav>.active>a {
+		  color: rgb(3,21,57);
+		  border-left: solid 2px rgb(40,157,222);
+		}
+		nav#toc .nav>.active:focus>a {
+		  color: rgb(3,21,57);
+		  border-left: solid 2px rgb(40,157,222);
+		}
+		nav#toc .nav>li:hover>a {
+		  color: rgb(3,21,57);
+		  border-left: solid 1px rgb(40,157,222);
+		}
+		nav#toc .nav>li.active:hover>a {
+		  color: rgb(3,21,57);
+		  border-left: solid 2px rgb(40,157,222);
+		}
+
+		nav[data-toggle='toc'] {
+		  margin-top: 30px;
+		}
+		
+		.img-subtitle{
+			font-size: 11px;
+			color: #2f415c;
+			padding: 0px 0px 30px 30px;
+			margin-top: -10px;
+			font-weight: bold;
+		}
+		
+		.table-center{
+		
+		}
+		
+		.table-center td {
+		   text-align: center;   
+		}
+		
+		.table-center th {
+		   text-align: center;   
+		}
+		
+		.table-sm td{
+			font-size: 12px;
+		}
+		
+		.table-sm th{
+			font-size: 12px;
+		}
+		
+		.activated{
+			background-color: #ccc;
+		}
+		
+		button{
+			outline: none !important;
+		}
+		
+		.td-blue{
+			background-color: #f1f8ff;
+		}
+		
+		.td-pink{
+			background-color: #fff5fb;
+		}
+		
+		.td-green{
+			background-color: #f4fff2;
+		}
+		
+		.th-blue{
+			background-color: #b8dcff;
+		}
+		
+		.th-pink{
+			background-color: #ffdcf2;
+		}
+		
+		.th-green{
+			background-color: #b7f0ba;
+		}
+		
+		.th-orange{
+			background-color: #ffd7a1;
+			font-weight: bold;
+			font-size: 14px !important;
+		}
+		
+		.th-turquoise{
+			background-color: #74d3e0;
+			font-weight: bold;
+			font-size: 14px !important;
+		}
+		
+		.th-darkgreen{
+			background-color: #48bb99;
+		}
+		
+		.th-red{
+			background-color: #d87575;
+		}
+		
+		.td-white{
+			background-color: #ffffff;
+		}
+		
+		.tableFixHead          { overflow: auto; max-height: 100vh;}  
+		.tableFixHead thead th { position: sticky; top: 0; z-index: 1; }  
+		.tableFixHead tbody th { position: sticky; left: 0; }  
+		
+		#tableInputs{
+			background-color: white;
+		}
+		
+		/* small screens */
+		@media (max-width: 768px) {
+		  /* override the Affix plugin so that the navigation isn't sticky */
+		  nav.affix[data-toggle='toc'] {
+			position: static;
+		  }
+
+		  /* PICK ONE */
+		  /* don't expand nested items, which pushes down the rest of the page when navigating */
+		  nav[data-toggle='toc'] .nav .active .nav {
+			display: none;
+		  }
+		  /* alternatively, if you *do* want the second-level navigation to be shown (as seen on this page on mobile), use this */
+		  nav[data-toggle='toc'] .nav .nav {
+			display: block;
+		  }
+		}
+	</style>
+
+	<script>
+		$(document).ready(function() {
+			var navSelector = '#toc';
+			var $myNav = $(navSelector);
+			Toc.init($myNav);
+			$('body').scrollspy({
+				target: navSelector
+			});
+		});
+		
+	</script>
+
+</head>	
+<body data-spy="scroll" data-target="#toc">
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<h1 style="margin-top: 16px !important;"> <img src="https://www.ocean-ops.org/static/images/oceanops/logos/oceanops-sm.png" alt="OceanOPS logo"/>&nbsp Metadata <small style="letter-spacing: 0px;"> documentation</small></h1>
+			</div>
+			<p class="navbar-text navbar-right text-right" style="padding:12px 24px 0px 0px;">last published: 2021-09-27 15:00:00</p>
+		</div>
+	</nav>
+	<div id="main-container" class="container-fluid">
+		<div class="row">
+			<div class="col-sm-3" id="left-side-container">
+				<nav id="toc" data-spy="affix"></nav>
+			</div>
+			<div class="col-sm-9 col-lg-8">
+								
+				<h2 class="title-border-bottom">Background</h2>
+				<div class="container-fluid" style="margin-top: 30px;">
+					<p>
+						This documentation describes the standard metadata managed and required by OceanOPS to support efficiently each Global Ocean Observing System (GOOS) 
+						Observation Coordination Group (OCG) networks implementation and enable an integrated perspective on the GOOS. 
+						<br>
+						OceanOPS 2021-2025 strategic plan’s goal #2 is to “Lead metadata standardization and integration across the global ocean observing networks”, including the following objectives:
+						<ul>
+							<li>2.1 Set and disseminate the standard and best practices for metadata harmonization</li>
+							<li>2.2 Develop the web services required for machine-to-machine metadata exchange and access</li>
+							<li>2.3 Provide a harmonized and high-quality standard of metadata across networks</li>
+							<li>2.4 Assist users on data access and available data services</li>
+							<li>2.5 Connect OceanOPS services with IOC and WMO international systems</li>
+						</ul>
+						This documentation will address the first part of this strategic goal, and in particular objectives 2.1 and 2.2.
+					</p>
+					
+					<p>
+						This modelling is built upon each network specific requirements, enriching gradually an integrated perspective, and connecting as far 
+						as possible the met-ocean standards (such as WIGOS Metadata Representation (WMDR) or SeaDataNet). These metadata are required to perform 
+						two functions essential to the Observing Networks, and mandated by the Joint-Technical Commission for Oceanography and Marine Meteorology
+						as its <a target="_blank" href="https://library.wmo.int/doc_num.php?explnum_id=4528">5th session</a>:
+						<ul>
+						<li>The allocation of unique WMO/WIGOS identifiers to each met-ocean observing platform (Decision 29)</li>
+						<li>The routine and integrated submission of WIGOS compliant metadata to the WMO Observing Systems Capability Analysis and Review system (OSCAR) (Decision 30)</li>
+						</ul>
+					</p>
+					
+					<p>
+						The latter represents some of the “output metadata” provided by OceanOPS Information System and will be covered in another documentation. 
+					</p>
+
+					<p>
+						The “input metadata”, specified in a later section, are the foundation of OceanOPS Information System, its web-based dashboard, API and 
+						resulting services. They come from implementers, directly, or/and via the observing networks data/metadata flows when they are operational 
+						and phased with OceanOPS requirements.
+					</p>
+					
+					<p>
+						These metadata integrated into OceanOPS are also key from networks and operator’s perspective. 
+						They allow visualization, communication, reporting, performance analysis tools, planning, quality control feedback (from users to producers), 
+						discovery of system capabilities, telecommunications/sensor/platform market status, etc. 
+						They are essential for the visibility of an observing network, and its national or Institutional contributions.
+					</p>
+
+					<p>
+						Any suggestion or comments are more than appreciated, please email them at metadata@ocean-ops.org, or submitted as a new discussion on 
+						the dedicated <a target="_blank" href="https://github.com/OceanOPS/metadata-standard">GitHub repository</a>.
+					</p>
+					
+				</div>		
+				<h2 class="title-border-bottom">Concepts</h2>
+				<div class="container-fluid">
+				
+					<h3>Introduction</h3>
+					<p>As the number of information systems is growing as well as networks metadata specifications are defined,
+					 it is important to clearly define the concepts being used within the OceanOPS’ scope and relationships between 
+					 those concepts. This section might then evolve regularly based on new systems integration or evolution of the ones already covered.
+					</p>
+					<p>Please note that to set up an integrated system, OceanOPS had to pick default terms to name the different concepts 
+					in the integrated perspective. These default terms are not definitive and might not suit every purpose or view, thus
+					the need to specify them here and to improve them when needed. Aliases can be, however, defined for downstream network
+					specific services (like a web interface), so networks are encouraged to liaise with the OceanOPS team to request such aliases.
+					</p>
+										
+					<h3>Structuring the GOOS</h3>
+					<p>The GOOS components are organized in “programs” (the implementing entity) contributing to one “observing network” 
+					and operating N “platforms”. These platforms can be regrouped or tagged under different labels, which are there-after 
+					called “networks” or “sites”.
+					</p>
+					<p>The Figure 1 summarizes how OceanOPS structures the GOOS components in the Information System. 
+					</p>
+					<img src="img/1.png" width="90%" style="padding: 20px;">		
+					<div class="img-subtitle">FIGURE 1 – GOOS STRUCTURATION IN OCEANOPS</div>		
+
+					<p style="line-height: 200%;"><strong>Examples:</strong><br>
+						GOOS <strong>&nbsp>&nbsp</strong> DBCP <strong>&nbsp>&nbsp</strong> MétéoFrance Drifting Buoy program <strong>&nbsp>&nbsp</strong> drifting buoys &nbsp <i>(in the network E-SURFMAR, Global Drifter Array)</i>
+					<br>
+						GOOS <strong>&nbsp>&nbsp</strong> SOT <strong>&nbsp>&nbsp</strong> VOS-DE program <strong>&nbsp>&nbsp</strong> stations &nbsp <i>(in the network E-SURFMAR, VOS)</i>
+					<br>
+						GOOS <strong>&nbsp>&nbsp</strong> Argo <strong>&nbsp>&nbsp</strong> Argo JAMSTEC program <strong>&nbsp>&nbsp</strong> floats &nbsp <i>(in the network Deep Argo, BGC-Argo, TPOS, etc.)</i>
+					</p>
+					<p>
+						In the following sections, you will find metadata schemes and the description of the main OceanOPS concepts. 
+						There are many concepts, but a certain number of them needs to be defined/registered only once in the OceanOPS 
+						system to set up the environment. Then this environment will be common to a group of platforms and derived 
+						from other metadata as appropriate. 
+						<ul>
+						<li>
+							OceanOPS <a href="#conceptProgram">program</a> set up: The first step is to ensure that the implementing program (mandatory element) 
+							exists in the OceanOPS system and is well defined. An OceanOPS program is defined by a country, a list of 
+							default contact points and agencies, with dedicated roles. To set up a new implementing program, or to update 
+							program metadata (contact, agency, or role information), please contact <a href="mailto:support@ocean-ops.org">OceanOPS team</a>. 
+						</li><br>
+						<li>
+							Code tables: New ships and new cruises records relevant to a platform description can be registered by users. 
+							Once registered, these new elements can be easily declared as a metadata of a platform (deployment / recovery ship or cruise).
+						</li>
+						</ul>
+					</p>
+					
+					
+					<h3>Concept – Simple chart</h3>
+					<img src="img/2.png" width="90%" style="padding: 20px;">
+					<div class="img-subtitle">FIGURE 2 – METADATA SIMPLE CHART</div>		
+					<p>See the detailed chart <a href="https://www.ocean-ops.org/metadata/#concepts-detailed-entity-diagram">here</a>.  
+					</p>
+					
+					<h3>Concept definitions</h3>
+					<p>The following tables list the main concepts composing OceanOPS’ metadata model. They include the 
+					default name of the concept, a description, known aliases and any code tables linked to that concept 
+					and mapped at OceanOPS (not necessarily used as it, but mapped). This list is not exhaustive and 
+					will be completed over time. 
+					<br><br>				
+					(**) Auto calculated/derived metadata
+					</p>
+					
+						<h4>Implementers</h4>
+						<p>As described <a href="https://www.ocean-ops.org/metadata/#setting-up-of-the-environment">below</a>, the definition of this environment must be done only once (or to be updated when for new contact information, …)
+						</p>
+						
+						<div class="table-responsive">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>Entity</th>
+										<th>Description</th>
+										<th>Known aliases</th>
+										<th>Code tables</th>
+									</tr>
+								</thead>
+								<tbody>
+									
+									<tr>
+										<th><a target="_blank" href="https://www.ocean-ops.org/api/1.0/help/?param=agency">Agency</a></th>
+										<td>
+											An agency is an organization, a manufacturer, a data centre, POGO member, etc.
+											A role can be dedicated to each one (program/agency, platform/agency).
+											Agencies can be regrouped under 'POGO'.
+											<ul><li><a target="_blank" href="https://www.ocean-ops.org/api/1.0/help/?param=agencyrole">Agency role values</a></li></ul>
+										</td>
+										<td>Organization, platform_maker</td>
+										<td><a target="_blank" href="https://www.seadatanet.org/Metadata/EDMO-Organisations">EDMO</a></td>
+									</tr>
+									<tr id="conceptProgram">
+										<th><a target="_blank" href="https://www.ocean-ops.org/api/1.0/help/?param=program">Program</a></th>
+										<td>
+											A program defines a group of platforms or cruises managed by the same lead agency (generally national). It materializes the implementing, operating, and responsible team. 
+											A program is bound to:
+											<ul>
+											<li>one and only one country,</li>
+											<li>to one or several agencies (including one lead agency) with defined roles,</li>
+											<li>to a set of contact points with defined roles.</li>
+											</ul>
+											Some particular cases such as EuroArgo (European Research Infrastructure Consortium), or E-SURFMAR (EUMETNET, grouping of European National Meteorological Services) use a multinational agency and “Europe” as country.
+										</td>
+										<td>Institution, project_name</td>
+										<td><a target="_blank" href="https://codes.wmo.int/wmdr/_ProgramAffiliation">WIGOS 2-02</a></td>
+									</tr>
+									<tr>
+										<th><a target="_blank" href="https://www.ocean-ops.org/api/1.0/help/?param=country">Country</a> (**)</th>
+										<td>
+											The country list used by OceanOPS is a union of the member state lists of the 
+											IOC-UNESCO and the WMO, plus 'Europe'. <a target="_blank" href="https://fr.wikipedia.org/wiki/ISO_3166-1">ISO 3166-1</a> is used to identify them.<br><br>
+											Countries can be grouped according to different criteria, e.g.:<br>
+											<ul>
+												<li>IOC member group</li>
+												<li>WMO member group</li>
+											</ul>
+
+										</td>
+										<td>Member State (IOC-UNESCO), Member Territory (WMO)</td>
+										<td><a target="_blank" href="https://vocab.seadatanet.org/v_bodc_vocab_v2/browse.asp?order=conceptid&formname=search&screen=0&lib=c32&v0_0=&v1_0=conceptid%2Cpreflabel%2Caltlabel%2Cdefinition%2Cmodified&v2_0=0&v0_1=&v1_1=conceptid&v2_1=3&v0_2=&v1_2=preflabel&v2_2=3&v0_3=&v1_3=altlabel&v2_3=3&v0_4=&v1_4=modified&v2_4=9&v0_5=&v1_5=modified&v2_5=10&x=29&y=21&v1_6=&v2_6=&v1_7=&v2_7=">C32 (International Standards Organisation countries)</a></td>
+									</tr>
+									<tr>
+										<th>Contact</th>
+										<td>
+											People involved in a program, with a dedicated role(s). Contacts registered for 
+											a program will be automatically linked to a platform managed by the program. 
+											Users can also add extra contacts/roles for some platforms. <br>
+											<ul>
+												<li><a target="_blank" href="https://www.ocean-ops.org/api/1.0/help/?param=contactrole">Contact role values</a></li>
+											</ul>
+
+										</td>
+										<td></td>
+										<td>ORCiD</td>
+									</tr>
+									
+								</tbody>
+							</table>
+						</div>
+						
+						<h4>General platform description</h4>
+						
+						<div class="table-responsive">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>Entity</th>
+										<th>Description</th>
+										<th>Known aliases</th>
+										<th>Code tables</th>
+									</tr>
+								</thead>
+								<tbody>
+									
+									<tr>
+										<th><!--<a target="_blank" href="https://www.ocean-ops.org/api/1.0/help/?param=platform">-->Platform</a></th>
+										<td>
+											All that can be deployed or installed, and equipped with sensors (an observing entity)
+											is considered as a “Platform” at OceanOPS: <br>
+											<ul>
+												<li>Argo: float</li>
+												<li>DBCP: drifting buoy, moored buoy (more specifically, a deployment), fixed platform, tsunameter, ice buoy</li>
+												<li>SOT: VOS weather station, ASAP balloon launcher, XBT probe launcher</li>
+												<li>OceanSITES: mooring line (more specifically, a mooring deployment)</li>
+												<li>GO-SHIP: not applicable (cruise level monitoring only, hardware metadata to be defined)</li>
+												<li>OceanGliders: a glider (more specifically, a glider mission)</li>
+												<li>GLOSS: tide gauge</li>
+												<li>AniBOS: an instrument carried by an animal</li>
+											</ul>
+										</td>
+										<td>Station (VOS), Observing facility/platform/station (WIGOS)</td>
+										<td></td>
+									</tr>
+									<tr>
+										<th><a target="_blank" href="https://www.ocean-ops.org/api/1.0/help/?param=platformmodel">Platform model</a></th>
+										<td>
+											The most detailed level of categorization of a platform, ideally containing manufacturer’s information and product reference.
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<th><a target="_blank" href="https://www.ocean-ops.org/api/1.0/help/?param=platformtype">Platform type</a> (**)</th>
+										<td>
+											The middle level of categorization of a platform. It makes the link between the
+											platform’s category (family) and the manufacturer’s model.
+										</td>
+										<td></td>
+										<td><a target="_blank" href="https://codes.wmo.int/wmdr/_FacilityType">WIGOS 3-04</a></td>
+									</tr>
+									<tr>
+										<th><a target="_blank" href="https://www.ocean-ops.org/api/1.0/help/?param=platformfamily">Platform family</a> (**)</th>
+										<td>
+											The highest level of categorization of a platform. Describes to what category instrument this platform belongs to.
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<th><a target="_blank" href="https://www.ocean-ops.org/api/1.0/help/?param=network">Network</a></th>
+										<td>
+											A network is a grouping of platforms, crossing the boundaries of the program. 
+											It is usually virtual and represents a common effort or way to measure data. 
+											It can represent a mutualized scientific/geographical goal (array), a platform 
+											class, or logistical/funding/etc. approach. The Network entity is then described by:<br>
+											<ul>
+												<li><a target="_blank" href="https://www.ocean-ops.org/api/1.0/help/?param=networktype">Network type</a> (new concept, to be improved)</li>
+											</ul>
+										</td>
+										<td>Project_name, array</td>
+										<td></td>
+									</tr>
+									<tr>
+										<th><a target="_blank" href="https://www.ocean-ops.org/arcgisserver/rest/services/OceanOPS/Sites/MapServer/0">Site</a></th>
+										<td>
+											A site is a geographical area in which the platform operates.
+										</td>
+										<td>site_code</td>
+										<td></td>
+									</tr>
+									
+								</tbody>
+							</table>
+						</div>
+						
+						<h4>Platform identifiers</h4>
+						
+						<div class="table-responsive">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>Entity</th>
+										<th>Description</th>
+										<th>Known aliases</th>
+										<th>Code tables</th>
+									</tr>
+								</thead>
+								<tbody>
+									
+									<tr>
+										<th>Reference</th>
+										<td>
+											The unique OceanOPS platform identifier:  <br>
+											<ul>
+												<li>The WMO number for floats</li>
+												<li>Concatenation of the WMO number and of an incremental number for moorings, gliders, drifters</li>
+												<li>The SOT ID for weather stations and other ship-based platforms</li>
+											</ul>
+											It is a temporary unique identifier to be replaced by the WIGOS ID when fully implemented.
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<th>GTS ID</th>
+										<td>
+											The identifier used to tag data sent on the Global Telecommunication System.
+											Code for a given time window, multiple ones can be used across a platform lifetime (not unique).
+										</td>
+										<td>WMO number/code/ID, platform_number, wmo_platform_code</td>
+										<td></td>
+									</tr>
+									<tr>
+										<th>WIGOS ID</th>
+										<td>
+											The WIGOS identifier (WMO Integrated Global Observing System) is allocated to a platform and 
+											used for interoperability with OSCAR (Observing Systems Capability Analysis and Review Tool).
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<th>Serial number</th>
+										<td>
+											The serial number of the platform.
+										</td>
+										<td>Float_serial_no, glider_serial_no</td>
+										<td></td>
+									</tr>
+									<tr>
+										<th>Internal ID</th>
+										<td>
+											The local identifier allocated by the program/institute which deploys and maintains the platform.
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+									
+								</tbody>
+							</table>
+						</div>
+						
+						<h4>Operations</h4>
+						
+						<div class="table-responsive">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>Entity</th>
+										<th>Description</th>
+										<th>Known aliases</th>
+										<th>Code tables</th>
+									</tr>
+								</thead>
+								<tbody>									
+									<tr id='ShipEntity'>
+										<th>Ship</th>
+										<td>
+											A ship is the vehicle that carries a platform (the shipment) either upon 
+											its deployment (e.g., deployment of a drifting buoy) or during a certain 
+											operation time (e.g., a VOS station). It is usually a boat (Research Vessel,
+											merchant ship, etc.) but can also take another form like an airplane.<br><br>
+											The ship is described by:  <br>
+											<ul>
+												<li>Name</li>
+												<li>IMO number</li>
+												<li>Country</li>
+												<li>Call sign</li>
+												<li><a href="#ShipTypeEntity">Ship type (ship categorisation)</a></li>
+												<li>ICES code (unique code allocated by ICES for an instance/ownership of the hull)</li>
+											</ul>
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr id='ShipTypeEntity'>
+										<th><a target="_blank" href="https://www.ocean-ops.org/api/1.0/help/?param=shiptype">Ship type</a></th>
+										<td>
+											Entity representing the type of the <a href='#ShipEntity'>Ship</a>.<br>
+										</td>
+										<td>Vessel type (Pub47/SOT)</td>
+										<td></td>
+									</tr>
+									<tr>
+										<th><a target="_blank" href="https://www.ocean-ops.org/arcgisserver/rest/services/Commons/CRUISE_LINE/MapServer/0">Cruise</a></th>
+										<td>
+											A cruise represents a travel of a ship, over a given period, with a specific purpose. A cruise is described by:  <br>
+											<ul>
+												<li>Name of the cruise</li>
+												<li>Ship</li>
+												<li>Departure dates, Arrival dates</li>
+												<li>EXPOCODE  (unique concatenation of ICES code and ‘YYYYMMDD’ formatted departure date)</li>
+												<li>A schematic geographical route (standard exchange format, e.g. WKT)</li>
+											</ul>
+										</td>
+										<td>Deployment cruise, Retrieval cruise, deployment_cruise_id</td>
+										<td></td>
+									</tr>
+									<tr>
+										<th>Deployment</th>
+										<td>
+											The definition of a platform deployment is a bit different depending on the observing network.
+											For platforms deployed at sea (Argo, OceanGliders, DBCP, OceanSITES), the deployment is the 
+											moment the platform is launched at sea. For platforms installed on a ship (SOT), the deployment 
+											is the time the platform is ready to operate and is equivalent to an installation date. 
+											A deployment is described by: <br>
+											<ul>
+												<li>A deployment date (<a target="_blank" href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a>)</li>
+												<li>A deployment position (latitude, longitude)</li>
+												<li>A deployment ship</li>
+												<li><a target="_blank" href="https://www.ocean-ops.org/api/1.0/help/?param=deploymentmethod">A deployment method</a></li>
+												<li><a target="_blank" href="https://www.ocean-ops.org/arcgisserver/rest/services/Commons/CRUISE_LINE/MapServer/0">A deployment cruise</a></li>
+											</ul>
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<th>Retrieval</th>
+										<td>
+											The retrieval information is relevant to the platform recovery or end of life for platform 
+											at sea, or to de-installation of a platform on a ship.<br><br>
+											A recovery is described by: <br>
+											<ul>
+												<li>A retrieval and post-retrieval status</li>
+												<li>Retrieval dates (start date and end date) (Format <a target="_blank" href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a>)</li>
+												<li>A retrieval ship</li>
+												<li>A retrieval ship</li>
+												<li>A retrieval ship</li>
+												<li><a target="_blank" href="https://www.ocean-ops.org/arcgisserver/rest/services/Commons/CRUISE_LINE/MapServer/0">A retrieval cruise</a></li>
+												<li>A retrieval <a target="_blank" href="https://fr.wikipedia.org/wiki/ISO_3166-1">country</a></li>
+											</ul>
+										</td>
+										<td>Recovery</td>
+										<td></td>
+									</tr>
+									<tr>
+										<th><a target="_blank" href="https://www.ocean-ops.org/api/1.0/help/?param=platformstatus">Platform status</a> (**)</th>
+										<td>
+											OceanOPS defines several statuses, which are used to track a platform during its lifecycle.
+											They are automatically set, depending on the metadata we received at the registration 
+											(deployment plans) and in real time (through observations, i.e., GTS/GDAC).
+										</td>
+										<td></td>
+										<td><a target="_blank" href="https://codes.wmo.int/wmdr/_ReportingStatus">WIGOS 3-09</a></td>
+									</tr>
+									<tr>
+										<th><a target="_blank" href="https://www.ocean-ops.org/api/1.0/help/?param=endingcause">Ending cause</a></th>
+										<td>
+											The ending cause describes the reason why the platform is closed or dead. 
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+									
+								</tbody>
+							</table>
+						</div>
+						
+						
+						<h4>Variables</h4>
+						
+						<div class="table-responsive">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>Entity</th>
+										<th>Description</th>
+										<th>Known aliases</th>
+										<th>Code tables</th>
+									</tr>
+								</thead>
+								<tbody>
+									
+									<tr>
+										<th><a target="_blank" href="https://www.ocean-ops.org/api/1.0/help/?param=variable">Variable</a> (**)</th>
+										<td>
+											Variables describe what is measured by a sensor on a platform. This entity contains simplified variables, 
+											to ease discovery and statistics computation. The variables can be derived from the sensor model or specified 
+											along with the sensor model with other details.
+										</td>
+										<td>Parameter, Observed Variable</td>
+										<td>
+											<a target="_blank" href="http://codes.wmo.int/wmdr/_ObservedVariableOcean">WIGOS 1-01</a><br>
+											<a target="_blank" href="http://vocab.nerc.ac.uk/collection/P01/current/">P01 (BODC Parameter Usage Vocabulary)</a><br>
+											<a target="_blank" href="https://vocab.nerc.ac.uk/collection/P02/current/">P02 (SeaDataNet Parameter Discovery Vocabulary)</a>
+										</td>
+									</tr>
+									<tr>
+										<th><a target="_blank" href="https://www.ocean-ops.org/api/1.0/help/?param=sensormodel">Sensor model</a></th>
+										<td>
+											This entity represents a package of sensor types (sensors, gauges, probes, etc.). 
+											It is usually provided by a manufacturer alongside a serial number.
+										</td>
+										<td>Instrument, Device</td>
+										<td>
+											<a target="_blank" href="http://vocab.nerc.ac.uk/collection/L22/current/">L22 (SeaVoX)</a><br>
+											<a target="_blank" href="http://vocab.nerc.ac.uk/search_nvs/R27/">R27 (Argo)</a>
+										</td>
+									</tr>
+									<tr>
+										<th>Sensor model set up attributes</th>
+										<td>
+											Several attributes describe the properties of a sensor installed on a platform, including (list not exhaustive): <br>
+											<ul>
+												<li>The measured variables</li>
+												<li>The serial number of the sensor </li>
+												<li>The date of the last calibration</li>
+												<li>The start/end date of the sensor</li>
+												<li>Sensor height/depth relative to sea level +Height above the deck, Distance from the bow, Distance from centre line</li>
+											</ul>
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<th><a target="_blank" href="https://www.ocean-ops.org/api/1.0/help/?param=sensortype">Sensor type</a> (**)</th>
+										<td>
+											A sensor type is a high categorization level of sensor, performing one measurement for a 
+											given variable. A Sensor Model can be linked to several sensor types, defining a default set of variables.
+										</td>
+										<td>Sensor</td>
+										<td>
+											<a target="_blank" href="http://vocab.nerc.ac.uk/collection/L05/current/">L05 (SeaDataNet Device Categories)</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<h4>Hardware</h4>
+						
+						<div class="table-responsive">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>Entity</th>
+										<th>Description</th>
+										<th>Known aliases</th>
+										<th>Code tables</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th>Telecom and backup telecom</th>
+										<td>
+											A set of metadata describes the telecom used on the platform: <br>
+											<ul>
+												<li>Number: the identifier used for this telecommunication system</li>
+												<li><a target="_blank" href="https://www.ocean-ops.org/api/1.0/help/?param=telecomtype">Telecom type</a>: telecommunication system used to send the data</li>
+												<li><a target="_blank" href="https://www.ocean-ops.org/api/1.0/help/?param=telecomservice">Telecom service</a></li>
+												<li><a target="_blank" href="https://www.ocean-ops.org/api/1.0/help/?param=telecomformat">Telecom format</a></li>
+												<li><a target="_blank" href="https://www.ocean-ops.org/api/1.0/help/?param=trackingsystem">Tracking system</a>: means used to locate and monitor the platform.</li>
+											</ul>
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<th>Other hardware attributes</th>
+										<td>
+											<ul>
+												<li>Control board type</li>
+												<li>Control board serial number</li>
+												<li>Hardware batch reference</li>
+											</ul>
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<th>Software</th>
+										<td>
+											Description of the software that performs on the platform: <br>
+											<ul>
+												<li><a target="_blank" href="https://www.ocean-ops.org/api/1.0/help/?param=platformsoftwaretype">software type</a></li>
+												<li>software name</li>
+												<li>software version</li>
+											</ul>
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<th>Firmware</th>
+										<td>
+											Description of the firmware that performs on the platform: <br>
+											<ul>
+												<li>Firmware Bluetooth id</li>
+												<li>Firmware version</li>
+											</ul>
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<th>Configuration</th>
+										<td>
+											Configuration metadata (when applicable):  <br>
+											<ul>
+												<li>Cycle time</li>
+												<li>Surface time</li>
+												<li>Drift pressure</li>
+												<li>Profile pressure</li>
+												<li>Ice detection software</li>
+												<li>Level of automation</li>
+												<li>Observation frequency</li>
+											</ul>
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					<h3>Concepts – Detailed entity diagram</h3>
+					<img src="img/3.png" width="90%" style="padding: 20px;">
+					<div class="img-subtitle">FIGURE 3 – METADATA DETAILED CHART (NOT EXHAUSTIVE)</div>
+				</div>
+				<h2 class="title-border-bottom">Setting up of the environment</h2>
+				<div class="container-fluid">
+					<h3>User account and edit rights</h3>
+					<p>
+					<strong>Step 1:</strong> The user needs to have an OceanOPS account, <a target= "_blank" href="https://www.youtube.com/watch?v=0OMMilr68X8">and be logged in</a>.
+					<br><br>
+					<strong>Step 2:</strong> To have edit rights, the user must be declared as a contact 
+					point of a program with a dedicated role (Data Manager, PI, …). 
+					Please contact OceanOPS team for such needs.
+					</p>					
+					
+					<h3>OceanOPS program set up</h3>
+					<p><strong>Properties of an <a target= "_blank" href="https://www.ocean-ops.org/api/1.0/help/?param=program">OceanOPS program</a></strong>: 
+						<ul>
+							<li>A program defines the implementing entity.</li>
+							<li>It is bound to one country and only one, identified as the main responsible entity.</li>
+							<li>A program is bound to a set of default agencies with different roles. If several agencies are involved, one should be identified as lead.</li>
+							<li>A program is bound to a set of default contact points with dedicated roles and editing rights on the website.</li>
+						</ul>
+					</p>	
+					
+					<p>
+						Each OceanOPS platform must be linked to one and only one program, the definition of this context in the OceanOPS 
+						system is therefore fundamental. The default values for contact points and agencies can be enriched which per platform information.
+					</p>	
+					
+					<p>
+						The setting up of the program environment in the OceanOPS database in managed only by the database administrators.
+					</p>
+					
+					<img src="img/4.png" width="90%" style="padding: 20px;">
+					<div class="img-subtitle">FIGURE 4 – PROGRAM SET-UP</div>									
+					
+					<h3>OceanOPS code tables / Existing standards</h3>
+					<p>
+						Before defining a code table, OceanOPS tries to identify if a standard already exists (BODC code tables 
+						or other standards, e.g., country (ISO 3166) and ship (ICES) tables). If such a standard is found, OceanOPS uses it. 
+						If several ones exist, OceanOPS identifies the one that match best the needs and tries to map as far as possible to the other ones.     
+					</p>										
+					
+					<h3>Code tables accessible to users</h3>
+					<p>Once connected to the OceanOPS website, the user can register new records in some existing code tables 
+					to use then these new records as platform metadata platform metadata. The user can submit:
+					<ul>
+						<li>a new ship</li>
+						<li>a new cruise</li>
+					</ul>					
+					</p>
+					<!--<img src="img/5.png" width="90%" style="padding: 20px;">
+					<div class="img-subtitle">FIGURE 5 – COMMUNITY DRIVEN CODE TABLES</div>-->
+						
+						<h4>Ship</h4>
+						<p>
+							To declare it as a deployment or a retrieval ship, or to link a ship to a cruise, the user can:  
+							<ul>
+								<li>register a new ship</li>
+								<li>or update the metadata of an existing one, in case of change of name, call sign or country</li>
+							</ul>
+						</p>
+						<p>
+							The mandatory fields to register a new ship are: 
+							<ul>
+								<li>The name of the ship</li>
+								<li>The ship type</li>
+								<li>The country</li>
+							</ul>
+						</p>
+						<p>
+							Every time a new ship is registered, a notification is sent to the OceanOPS team who will then check 
+							the metadata and, if needed, request a code to ICES. This ICES code will be registered as a ship metadata in the OceanOPS database. 
+						</p>
+						
+						<h4>Cruise</h4>
+						<p>
+							The user can register:  
+							<ul>
+								<li>Past cruises to add them as platform deployment or platform retrieval metadata</li>
+								<li>Planned cruises to enable the community to plan for future platform operations </li>
+							</ul>
+						</p>
+						<p>
+							A cruise is described with core metadata such as: 
+							<ul>
+								<li>The ship</li>
+								<li>The dates (start date and end date). Planned / Approximative dates for next cruises. </li>
+								<li>EXPOCODE (concatenation of ICES code and 'YYYYMMDD' formatted departure date)</li>
+								<li>List of contact points</li>
+								<li>If available, an approximative route (with waypoints)</li>
+							</ul>
+						</p>
+						<p>
+							and many other metadata like the mobilization/demobilization dates, the programs (if applicable), etc.. 
+						</p>
+						
+						<!--<h4>3.4.3 Sensor model</h4>
+						<p>
+							New sensor models can be registered by the users, and then reviewed by the team to check the 
+							consistency with regards to the integrated code table. 
+							<a target= "_blank" href="https://www.ocean-ops.org/api/1.0/?param=sensorModel">The sensor model</a>
+							is a precise description of the sensor and is linked to a sensor type, which are then linked to a variable.
+							A platform will be linked with one or several sensor models. Sensor types and variables are updated y administrators only. 
+						</p>-->
+				</div>
+				<h2 class="title-border-bottom">Platform metadata submission - Supported formats</h2>				
+				<div class="container-fluid" style="margin-top: 30px;">
+					<p>
+						Metadata can be submitted to OceanOPS via different formats, even if the standard one is a simple CSV that can work across all platforms and for past, present, and future activities.
+						If the content of such files is standard (meeting code tables requirements) a crawling function can be easily set up. Several demonstration files are available:
+						<ul>
+							<li><a target= "_blank" href="demo_files\argo.csv">Argo demo csv file</a></li>
+							<li><a target= "_blank" href="demo_files\OceanSITES.csv">OceanSITES demo csv file</a></li>
+							<li><a target= "_blank" href="demo_files\OceanGliders.csv">OceanGliders demo csv file</a></li>
+							<li><a target= "_blank" href="demo_files\DBCP.csv">DBCP demo csv file</a></li>
+							<li><a target= "_blank" href="demo_files\VOS.csv">VOS demo csv file</a></li>
+						</ul>
+					</p>
+					<p>
+						For now, most of the groups submit their files on-line, in different formats, while the web interface allows to do code tables mapping and secure several metadata on the fly (e.g., unique ship or sensor model), with the capability of processing a batch of files or platforms.
+					</p>
+					<p>
+						Several OCG networks have developed a complete data flow, including metadata, meeting OceanOPS requirements fully or partially. Some other networks rely on OceanOPS to manage their full set of metadata (e.g., VOS).
+					</p>
+					<br>
+					<p>
+						The following table summarizes how the task is progressing with each network, and which formats are enabled.
+					</p>
+					<p>
+						The number of stars indicates the level of compatibility of files with OceanOPS metadata requirements. <br>
+						*:	basic metadata <br>
+						**:	rather complete metadata but few attributes need control through a code table<br>
+						***:	complete metadata with controlled vocabulary – ready for M2M crawling.<br>
+						(*) improvement underway
+						</ul>
+						<br><br>
+					</p>
+					<div class="table-responsive">
+					<table class="table table-center table-bordered table-sm">
+						<tr>
+							<th></th>
+							<th>Argo<br>Core,&nbsp;BGC,&nbsp;Deep</th>
+							<th>OceanGliders</th>
+							<th>SOT<br>VOS,&nbsp;ASAP</th>
+							<th>SOT<br>SOOP</th>
+							<th>OceanSITES</th>
+							<th>DBCP<br>DB</th>
+							<th>DBCP<br>MB</th>
+							<th>AniBOS</th>
+							<th>GO-SHIP</th>
+							<th>GLOSS</th>
+							<th>Ship Cruises</th>
+							<th>HF Radars</th>
+							<th>OceanOPS (other platforms / integrated)</th>
+						</tr>
+						<tr>
+							<td>OceanOPS web</td>
+							<td>***</td>
+							<td>***</td>
+							<td>*(**)</td>
+							<td>*(**)</td>
+							<td>**(*)</td>
+							<td>***</td>
+							<td>**(*)</td>
+							<td>*</td>
+							<td>**</td>
+							<td>*</td>
+							<td>**</td>
+							<td>*</td>
+							<td>**(*)</td>
+						</tr>
+						<tr>
+							<td>OceanOPS CSV file</td>
+							<td>***</td>
+							<td>***</td>
+							<td>*(**)</td>
+							<td>*(**)</td>
+							<td>**(*)</td>
+							<td>***</td>
+							<td>**(*)</td>
+							<td>*</td>
+							<td>**</td>
+							<td>*</td>
+							<td>**</td>
+							<td>*</td>
+							<td>**(*)</td>
+						</tr>							
+						<tr>
+							<td>NetCDF file</td>
+							<td><a href="http://dx.doi.org/10.13155/29825" target="_blank">**(*)<br>V2.2,&nbsp;3.1</a></td>
+							<td>***<br>beta&nbsp;1.0</td>
+							<td></td>
+							<td></td>
+							<td><a href="http://www.oceansites.org/docs/oceansites_data_format_reference_manual.pdf" target="_blank">(***)</a></td>
+							<td><a href="https://doi.org/10.13155/81638" target="_blank">(***)</a></td>
+							<td></td>
+							<td>Planned</td>
+							<td>Planned?</td>
+							<td>?</td>
+							<td></td>
+							<td>?</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>API feed</td>
+							<td>EuroArgo monitoring</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td>SIO planned</td>
+							<td></td>
+							<td></td>
+							<td>(CCHDO)</td>
+							<td></td>
+							<td>MFP&nbsp;R/V&nbsp;cruises piloting&nbsp;(UK)</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Other formats</td>
+							<td>**(*)<br>US metafile&nbsp;v1,&nbsp;v2</td>
+							<td>***<br>Coriolis JSON&nbsp;v1.2,&nbsp;<a href="https://www.oceangliders.org/wp-content/uploads/2020/02/guidelines_to_fill_a_json_file_v1.3.1.docx" target="_blank">v1.3</a></td>
+							<td>PUB47<br>to be deprecated</td>
+							<td></td>
+							<td></td>
+							<td>**(*)<br>AOML deployment log</td>
+							<td>Excel<br>DEPRECATED</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>						
+					</table>
+					</div>
+					<br>
+					<p>Observation metadata feed - TBD</p>
+				</div>
+				
+				<h2 class="title-border-bottom">Workflow</h2>				
+				<div class="container-fluid" style="margin-top: 20px;">
+					<h3>Metadata submission</h3>
+					<p>
+						<ol style="line-height: 180%;">
+							<li>&nbsp Create an account on <a target="_blank" href="https://www.ocean-ops.org/board">ocean-ops.org</a> if not done yet. Cf. <a href="https://www.ocean-ops.org/metadata/#user-account-and-edit-rights">user account and edit rights</a>.</li>
+							<li>&nbsp Get in touch with OceanOPS team to determine under which program(s) your elements will be saved 
+							and thus giving your edit rights where appropriate. Contact points and agencies involved will be tagged 
+							under the program elements. Cf. <a href="https://www.ocean-ops.org/metadata/#oceanops-program-set-up">program set up</a>.
+							</li>
+							<li>&nbsp You can now register/edit your elements under the program(s) you are associated with. Several cases:</li>
+							<ol type="a">
+								<li>&nbspYou want to submit elements and you want a GTS identifier. Fill in the information OceanOPS requires 
+									(web form or CSV) and get in return the GTS identifier(s) (i.e., WMO codes), OceanOPS reference and WIGOS identifier(s).
+								</li>
+								<li>&nbspYou already have element(s) with corresponding GTS identifier(s) and want to submit them to OceanOPS. 
+									Fill in the information OceanOPS requires (web form or CSV) and get in return the OceanOPS reference and 
+									WIGOS identifier(s). This case will slowly be deprecated since OceanOPS metadata submission will allocate 
+									the WMO code (cf. previous item).
+								</li>
+								<li>&nbspOceanOPS already has your element(s) and you want to update the information. Fill in the information 
+									OceanOPS requires (web edit form or CSV), specifying OceanOPS reference as the mapping key.
+								</li>
+							</ol>
+							<li>&nbsp;If the format is stable, accepted, and its vocabulary (content) controlled (i.e. uploading the file on the interface requires no manual intervention prior to submission), a machine to machine exchange can be set up.</li>
+						</ol>
+					</p>
+					<p>
+					<emph>Challenge:</emph> ideally metadata must be available together with data (in the same file or aside) to users. 
+					However, OceanOPS needs metadata ahead of the operations and independently from observations published. 
+					In other words, OceanOPS cannot wait data to be released to get the metadata unless this is very close from first observation time. 
+					Also if OceanOPS monitors only the system from available data, it has no means to encourage operators to release data for instrument operating or to be operating. 
+					If the data format (often netCDF) is the only format available to share metadata then it must be filled in before data are published.
+					</p>
+					<p>
+						All data flows will need a WMO/WIGOS identifier. These will be provided automatically by a machine (in exchange of basic metadata).
+					</p>
+					<h3>Reference/WMO/WIGOS identifiers</h3>
+					<h4>Preliminary workflow</h4>
+					<p>
+						Requesting new WMO identifiers will be done through the submission mechanism described above. Their allocation will trigger the allocation of a WIGOS idenfifier and an OceanOPS reference.
+						It won't be necessary to request batches of IDs for years to come, they will be randomly allocated (following a minimal pattern) on the fly while creating records in the system.
+						Batches will still be allocated for planning activities, with the minimum metadata required being the program. 
+						However a recycling process will be set up to release unused identifiers (with no further metadata provided/no observations).
+					</p>
+					<h4>Implementation timeline</h4>
+					<p>
+						<ul>
+							<li>September 2021: backend development</li>
+							<li>October 2021: frontend development and documentation</li>
+							<li>November 2021: pilot tests with some proprams</li>
+							<li>December 2021: circular letter by WMO to announce the new service</li>
+							<li>January 2022: service operational</li>
+						</ul>
+					</p>
+					<h4>WIGOS identifiers and new WMO identifier allocation scheme</h4>
+					The new scheme to allocate WMO identifiers/codes is not yet operational nor officialized, but the following working document contains the rules that will be implemented through the automation of allocation at OceanOPS:
+					<a target='_blank' href='WSI_Ocean-DRAFT.pdf'>WSI_Ocean-DRAFT.pdf</a>
+				</div>
+				
+				<h2 id='InputsTableSection' class="title-border-bottom">Exhaustive list of inputs</h2>
+				<div class="container-fluid" style="margin-top: 30px;">
+					<p>In the table below, you will find the detailed list of input metadata, with the following columns:
+					<ol>
+					  <li>OceanOPS default name</li>
+					  <li>OceanOPS database location</li>
+					  <li>Format / link to code table</li>
+					  <li>Matching key if using a code table</li>
+					  <li>OceanOPS default CSV header name</li>
+					  <li>Known aliases</li>
+					  <li>Comment</li>
+					  <li>OceanOPS metadata level requirement (M: Mandatory, C: Conditional, O: Optional, a ‘*’ 
+					  indicates that the field is highly desirable to reach a high quality level of metadata) </li>
+					  <li>External code tables (WIGOS, BODC, etc.)</li>
+					  <li>Corresponding observing network vocabulary and specificities</li>
+					</ol>
+					</p>
+					<br>
+					<p>
+						These metadata requirements are evolutive, adaptative depending on the network, and based on the readiness of operations: a planned deployment will require less information than a deployed instrument.
+						The table is meant to show the extended requirements, for a fully functional observing element of the GOOS.
+					</p>
+				</div>
+				<div class="btn-group" role="group" aria-label="...">
+				  <button id="table1-btn" type="button" class="btn btn-default activated" onclick="toggleTables(1);">1. GENERAL DESCRIPTION</button>
+				  <button id="table2-btn" type="button" class="btn btn-default" onclick="toggleTables(2);">2. IMPLEMENTERS</button>
+				  <button id="table3-btn" type="button" class="btn btn-default" onclick="toggleTables(3);">3. IDENTIFIERS</button>
+				  <button id="table4-btn" type="button" class="btn btn-default" onclick="toggleTables(4);">4. OPERATIONS</button>
+				  <button id="table5-btn" type="button" class="btn btn-default" onclick="toggleTables(5);">5. VARIABLES</button>
+				  <button id="table6-btn" type="button" class="btn btn-default" onclick="toggleTables(6);">6. HARDWARE</button>
+				</div>
+			</div>
+		</div>
+		
+		<div style="text-align: right;">
+			<select name="level" id="level-select">
+				<option value="">--Filter by metadata level--</option>
+				<option value="">No filter</option>
+				<option value="O">O</option>
+				<option value="O*">O*</option>
+				<option value="C">C</option>
+				<option value="M">M</option>
+			</select>
+		</div>
+		
+		<div class="row">
+			<div class="col-sm-12 offset-sm-3" style="padding: 20px;" id="tableInputs">
+				<div class="table-responsive tableFixHead" id="table-1">
+					<table class="table table-striped table-bordered table-sm">
+						<thead>
+							<tr>
+								<th class="th-blue">OceanOPS metadata</th>
+								<th class="th-blue">OceanOPS database location</th>
+								<th class="th-blue">Format</th>
+								<th class="th-blue">Matching field/key</th>
+								<th class="th-blue">OceanOPS CSV default field</th>
+								<th class="th-blue">Known aliases</th>
+								<th class="th-blue">Comment</th>
+								<th class="th-blue">Metadata level</th>
+								<th class="th-pink">References</th>
+								<th class="th-green">Argo</th>
+								<th class="th-green">Glider</th>
+								<th class="th-green">OceanSITES</th>
+								<th class="th-green">SOT</th>
+							</tr>
+						</thead>
+						<tbody id="table1-body">
+						</tbody>
+					</table>	
+				</div>
+				
+				<div class="table-responsive tableFixHead" id="table-2" style="display: none;">
+					<table class="table table-striped table-bordered table-sm">
+						<thead>
+							<tr>
+								<th class="th-blue">OceanOPS metadata</th>
+								<th class="th-blue">OceanOPS database location</th>
+								<th class="th-blue">Format</th>
+								<th class="th-blue">Matching field/key</th>
+								<th class="th-blue">OceanOPS CSV default field</th>
+								<th class="th-blue">Known aliases</th>
+								<th class="th-blue">Comment</th>
+								<th class="th-blue">Metadata level</th>
+								<th class="th-pink">References</th>
+								<th class="th-green">Argo</th>
+								<th class="th-green">Glider</th>
+								<th class="th-green">OceanSITES</th>
+								<th class="th-green">SOT</th>
+							</tr>
+						</thead>
+						<tbody id="table2-body">
+						</tbody>
+					</table>	
+					<p style="font-size: 12px;">
+						(1) Agency roles should follow the same order as the Agencies listed in 'AGENCIES' field: the first role encountered will be attached to the first agency listed.
+					</p>	
+					<p style="font-size: 12px;">
+						(2) Contributor roles should follow the same order as the contributors listed in 'CONTRIBUTORS' field: the first role encountered will be attached to the first contributor listed.
+					</p>
+				</div>
+								
+				<div class="table-responsive tableFixHead" id="table-3" style="display: none;">
+					<table class="table table-striped table-bordered table-sm">
+						<thead>
+							<tr>
+								<th class="th-blue">OceanOPS metadata</th>
+								<th class="th-blue">OceanOPS database location</th>
+								<th class="th-blue">Format</th>
+								<th class="th-blue">Matching field/key</th>
+								<th class="th-blue">OceanOPS CSV default field</th>
+								<th class="th-blue">Known aliases</th>
+								<th class="th-blue">Comment</th>
+								<th class="th-blue">Metadata level</th>
+								<th class="th-pink">References</th>
+								<th class="th-green">Argo</th>
+								<th class="th-green">Glider</th>
+								<th class="th-green">OceanSITES</th>
+								<th class="th-green">SOT</th>
+							</tr>
+						</thead>
+						<tbody id="table3-body">
+						</tbody>
+					</table>	
+				</div>
+								
+				<div class="table-responsive tableFixHead" id="table-4" style="display: none;">
+					<table class="table table-striped table-bordered table-sm">
+						<thead>
+							<tr>
+								<th class="th-blue">OceanOPS metadata</th>
+								<th class="th-blue">OceanOPS database location</th>
+								<th class="th-blue">Format</th>
+								<th class="th-blue">Matching field/key</th>
+								<th class="th-blue">OceanOPS CSV default field</th>
+								<th class="th-blue">Known aliases</th>
+								<th class="th-blue">Comment</th>
+								<th class="th-blue">Metadata level</th>
+								<th class="th-pink">References</th>
+								<th class="th-green">Argo</th>
+								<th class="th-green">Glider</th>
+								<th class="th-green">OceanSITES</th>
+								<th class="th-green">SOT</th>
+							</tr>
+						</thead>
+						<tbody id="table4-body">
+						</tbody>
+					</table>	
+				</div>
+																
+				<div class="table-responsive tableFixHead" id="table-5" style="display: none;">
+					<p style="font-size: 12px;">
+						In order to handle multiple sensor information, every information describing the sensors/variables are organised into sub-cell within a CSV value. 
+						All values must contain the same number of sub-cells and respecting the same order, including empty ones.
+						For example, if a record contains three sensors and serial numbers for the first and second, the CSV file should be filled as follows: 
+						SENSOR_MODELS = "SENSOR1,SENSOR2,SENSOR3", SENSOR_SERIALS = "SERIAL1,,SERIAL3".
+					</p>	
+					<p style="font-size: 12px;">
+						A sensor information will indicate that the record is able to measure all the default variables linked to that sensor model.
+						If the sensor is not measuring all the default variables or a per-variable customization is required, sub-cells must be repeated for each specified variables. 
+						The example above, with "SENSOR1" being customized for two variables, would become:
+						SENSOR_MODELS = "VARIABLE1:SENSOR1,VARIABLE2:SENSOR1,SENSOR2,SENSOR3", SENSOR_SERIALS = "SERIAL1,SERIAL1,,SERIAL3".
+					</p>
+					<table class="table table-striped table-bordered table-sm">
+						<thead>
+							<tr>
+								<th class="th-blue">OceanOPS metadata</th>
+								<th class="th-blue">OceanOPS database location</th>
+								<th class="th-blue">Format</th>
+								<th class="th-blue">Matching field/key</th>
+								<th class="th-blue">OceanOPS CSV default field</th>
+								<th class="th-blue">Known aliases</th>
+								<th class="th-blue">Comment</th>
+								<th class="th-blue">Metadata level</th>
+								<th class="th-pink">References</th>
+								<th class="th-green">Argo</th>
+								<th class="th-green">Glider</th>
+								<th class="th-green">OceanSITES</th>
+								<th class="th-green">SOT</th>
+							</tr>
+						</thead>
+						<tbody id="table5-body">
+						</tbody>
+					</table>				
+				</div>
+				
+				<div class="table-responsive tableFixHead" id="table-6" style="display: none;">
+					<table class="table table-striped table-bordered table-sm">
+						<thead>
+							<tr>
+								<th class="th-blue">OceanOPS metadata</th>
+								<th class="th-blue">OceanOPS database location</th>
+								<th class="th-blue">Format</th>
+								<th class="th-blue">Matching field/key</th>
+								<th class="th-blue">OceanOPS CSV default field</th>
+								<th class="th-blue">Known aliases</th>
+								<th class="th-blue">Comment</th>
+								<th class="th-blue">Metadata level</th>
+								<th class="th-pink">References</th>
+								<th class="th-green">Argo</th>
+								<th class="th-green">Glider</th>
+								<th class="th-green">OceanSITES</th>
+								<th class="th-green">SOT</th>
+							</tr>
+						</thead>
+						<tbody id="table6-body">
+						</tbody>
+					</table>					
+				</div>
+			</div>
+		</div>
+			
+			
+		<div class="row">
+			<div class="col-sm-3" id="left-side-container">
+						</div>
+			<div class="col-sm-9 col-lg-8">
+			
+				<h2 class="title-border-bottom">FAQ - How to</h2>				
+				<div class="container-fluid">
+					<p>
+					<br>
+					 ...
+					<br>
+					<br>
+					</p>
+				</div>
+			
+			</div>
+		</div>	
+	</div>
+	<br>
+</body>
+
+<script>
+	function toggleTables(id){
+		for(i = 1; i< 7;i++){
+			if(i == id){
+				$("#table" + i + "-btn").addClass("activated");
+				$("#table-" + i).css("display", "block");
+				var tabIndex = i;
+					$.getJSON("inputs/"+ i +".json", function( data ) {
+						var t = "";
+						$.each( data, function( index ) {
+							var row = data[index];
+							
+							if(!selectedFilter || row["Level"] == selectedFilter){
+								var rowAliases = "";
+								if(aliases[row["CSV field"]]){
+									aliases[row["CSV field"]].forEach(function(a, i){
+										if(i> 0){
+											rowAliases += "<br>";
+										}
+										rowAliases += a;
+									});
+								}
+								
+								t += "<tr>"; 
+								t += "<th class='td-blue'>"+ row["OceanOPS metadata"] +"</th>"; 
+								t += "<td class='td-blue'>"+ row["Database"] +"</td>"; 
+								t += "<td class='td-blue'>"+ row["Format"] +"</td>"; 
+								t += "<td class='td-blue'>"+ row["Match"] +"</td>"; 
+								t += "<td class='td-blue'>"+ row["CSV field"] +"</td>"; 
+								t += "<td class='td-blue'>"+ rowAliases + "</td>"; 
+								t += "<td class='td-blue'>"+ row["Comment"] +"</td>"; 
+								t += "<td class='td-blue'>"+ row["Level"] +"</td>"; 
+								t += "<td class='td-pink'>"+ row["References"] +"</td>"; 
+								t += "<td class='td-green'>"+ row["Argo"] +"</td>"; 
+								t += "<td class='td-green'>"+ row["Glider"] +"</td>"; 
+								t += "<td class='td-green'>"+ row["OceanSITES"] +"</td>"; 
+								t += "<td class='td-green'>"+ row["SOT"] +"</td>"; 
+								t += "</tr>"; 
+							}
+						});
+						$('#table'+ tabIndex +'-body').html(t);
+					});
+			}else{
+				$("#table" + i + "-btn").removeClass("activated");
+				$("#table-" + i).css("display", "none");
+			}
+		}
+		selectedTab = id;
+	}
+	
+	
+	var aliases = {};
+	var selectedTab = 1;
+	var selectedFilter = "";
+	
+	$.getJSON("https://www.ocean-ops.org/static/board/data/aliases.json", function( data ) {
+		aliases = data;
+		toggleTables(selectedTab);
+	});
+	
+	$('#level-select').change(function() {
+		selectedFilter = $('#level-select option:selected').text();
+		if(selectedFilter == "No filter" || selectedFilter == "--Filter by metadata level--"){
+			selectedFilter = "";
+		}
+		toggleTables(selectedTab);
+	});
+	
+</script>
+
+</html>
