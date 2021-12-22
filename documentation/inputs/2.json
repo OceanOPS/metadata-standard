@@ -2,7 +2,7 @@
 {
 	"OceanOPS metadata": "Program",
 	"Database": "PROGRAM, PTF.program_id",
-	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/preview/help/?param=program'>Reference table</a>",
+	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/1/help/?param=program'>Reference table</a>",
 	"Match": "NAME",
 	"CSV field": "PROGRAM",
 	"Comment": "OceanOPS naming system to allocate a program to the platform deployment. Contains the observing network, the default agencies and contacts.",
@@ -16,7 +16,7 @@
 {
 	"OceanOPS metadata": "Agency",
 	"Database": "AGENCY, AGENCY_PTF.agency_id",
-	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/preview/help/?param=agency'>Reference table</a>",
+	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/1/help/?param=agency'>Reference table</a>",
 	"Match": "NAME_SHORT/REF",
 	"CSV field": "AGENCIES",
 	"Comment": "An agency is an organization, a manufacturer, a data center, etc. ",
@@ -30,7 +30,7 @@
 {
 	"OceanOPS metadata": "Agency's role",
 	"Database": "AGENCY_ROLE, AGENCY_PTF.agency_role_id",
-	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/preview/help/?param=agencyrole'>Reference table</a>",
+	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/1/help/?param=agencyrole'>Reference table</a>",
 	"Match": "NAME_SHORT (1)",
 	"CSV field": "AGENCY ROLES",
 	"Comment": "A role can be dedicated to each (program/agency)",
@@ -58,7 +58,7 @@
 {
 	"OceanOPS metadata": "Contact's role",
 	"Database": "ROLE, CONTACT_PTF_ROLE.role_id",
-	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/preview/help/?param=contactrole'>Reference table</a>",
+	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/1/help/?param=contactrole'>Reference table</a>",
 	"Match": "NAME_SHORT (2)",
 	"CSV field": "CONTRIBUTOR ROLES",
 	"Comment": "By defaut, roles attributed to the contact program.",
@@ -72,7 +72,7 @@
 {
 	"OceanOPS metadata": "Sensor model contact",
 	"Database": "SENSOR_MODEL, PTF.CONTACT_PTF_ROLE.sensor_model_id",
-	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/preview/help/?param=sensormodel'>Reference table</a>",
+	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/1/help/?param=sensormodel'>Reference table</a>",
 	"Match": "n/a",
 	"CSV field": "No",
 	"Comment": "New contact(s) / role(s) can be added and linked to a sensor model",

@@ -2,7 +2,7 @@
 {
 	"OceanOPS metadata": "Telecom type",
 	"Database": "TELECOM_TYPE, PTF.TELECOM.telecom_type_id",
-	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/preview/help/?param=telecomtype'>Reference table</a>",
+	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/1/help/?param=telecomtype'>Reference table</a>",
 	"Match": "NAME",
 	"CSV field": "TELECOM TYPE",
 	"Comment": "",
@@ -44,7 +44,7 @@
 {
 	"OceanOPS metadata": "Telecom service",
 	"Database": "TELECOM_SERVICE, PTF.TELECOM.telecom_service_id",
-	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/preview/help/?param=telecomservice'>Reference table</a>",
+	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/1/help/?param=telecomservice'>Reference table</a>",
 	"Match": "NAME",
 	"CSV field": "TELECOM SERVICE",
 	"Comment": "",
@@ -58,7 +58,7 @@
 {
 	"OceanOPS metadata": "Telecom format",
 	"Database": "TELECOM_FORMAT, PTF.TELECOM.telecom_format_id",
-	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/preview/help/?param=telecomformat'>Reference table</a>",
+	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/1/help/?param=telecomformat'>Reference table</a>",
 	"Match": "NAME",
 	"CSV field": "TELECOM FORMAT",
 	"Comment": "",
@@ -72,7 +72,7 @@
 {
 	"OceanOPS metadata": "Tracking system",
 	"Database": "TRACKING_SYSTEM,PTF.tracking_system_id",
-	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/preview/help/?param=trackingsystem'>Reference table</a>",
+	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/1/help/?param=trackingsystem'>Reference table</a>",
 	"Match": "",
 	"CSV field": "TRACKING SYSTEM",
 	"Comment": "",
@@ -86,7 +86,7 @@
 {
 	"OceanOPS metadata": "Latency",
 	"Database": "LATENCY, PTF.TELECOM.LATENCY_ID",
-	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/preview/help/?param=latency'>Reference table</a>",
+	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/1/help/?param=latency'>Reference table</a>",
 	"Match": "NAME SHORT",
 	"CSV field": "LATENCY",
 	"Comment": "",
@@ -100,7 +100,7 @@
 {
 	"OceanOPS metadata": "Backup telecom type",
 	"Database": "TELECOM_TYPE, PTF.backup_telecom_id.telecom_type_id",
-	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/preview/help/?param=telecomtype'>Reference table</a>",
+	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/1/help/?param=telecomtype'>Reference table</a>",
 	"Match": "NAME",
 	"CSV field": "No",
 	"Comment": "",
@@ -142,7 +142,7 @@
 {
 	"OceanOPS metadata": "Backup telecom service",
 	"Database": "TELECOM_SERVICE, PTF.backup_telecom_id.telecom_service_id",
-	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/preview/help/?param=telecomservice'>Reference table</a>",
+	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/1/help/?param=telecomservice'>Reference table</a>",
 	"Match": "NAME",
 	"CSV field": "No",
 	"Comment": "",
@@ -156,7 +156,7 @@
 {
 	"OceanOPS metadata": "Backup telecom format",
 	"Database": "TELECOM_FORMAT, PTF.backup_telecom_id.telecom_format_id",
-	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/preview/help/?param=telecomformat'>Reference table</a>",
+	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/1/help/?param=telecomformat'>Reference table</a>",
 	"Match": "NAME",
 	"CSV field": "No",
 	"Comment": "",
@@ -170,7 +170,7 @@
 {
 	"OceanOPS metadata": "Backup tracking system",
 	"Database": "TRACKING_SYSTEM, PTF.backup_tracking_system_id",
-	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/preview/help/?param=trackingsystem'>Reference table</a>",
+	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/1/help/?param=trackingsystem'>Reference table</a>",
 	"Match": "",
 	"CSV field": "No",
 	"Comment": "",
@@ -254,7 +254,7 @@
 {
 	"OceanOPS metadata": "Level of automation",
 	"Database": "PTF_AUTOMATION / PTF.PTF_AUTOMATION.ref",
-	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/preview/help/?param=platformautomation'>Reference table</a>",
+	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/1/help/?param=platformautomation'>Reference table</a>",
 	"Match": "REF",
 	"CSV field": "No",
 	"Comment": "",
@@ -296,7 +296,7 @@
 {
 	"OceanOPS metadata": "Maintenance activity / Programme",
 	"Database": "SERVICE.program_id",
-	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/preview/help/?param=program'>Reference table</a>",
+	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/1/help/?param=program'>Reference table</a>",
 	"Match": "NAME",
 	"CSV field": "MAINTENANCE ACTIVITY",
 	"Comment": "Maintenance activity has 4 sub-fields in the CSV.",
@@ -310,7 +310,7 @@
 {
 	"OceanOPS metadata": "Maintenance activity / Type",
 	"Database": "SERVICE.service_type_id",
-	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/preview/help/?param=servicetype'>Reference table</a>",
+	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/1/help/?param=servicetype'>Reference table</a>",
 	"Match": "NAME",
 	"CSV field": "MAINTENANCE ACTIVITY",
 	"Comment": "Maintenance activity has 4 sub-fields in the CSV.",
@@ -352,7 +352,7 @@
 {
 	"OceanOPS metadata": "Battery",
 	"Database": "PTF_BATTERY, PTF.PTF_HARDWARE.battery_id",
-	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/preview/help/?param=platformbattery'>Reference table</a>",
+	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/1/help/?param=platformbattery'>Reference table</a>",
 	"Match": "NAME",
 	"CSV field": "BATTERY",
 	"Comment": "",
@@ -520,7 +520,7 @@
 {
 	"OceanOPS metadata": "Software type",
 	"Database": "PTF_SOFTWARE_TYPE, PTF.PTF_SOFTWARE.PTF_SOFTWARE_TYPE.name",
-	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/preview/help/?param=platformsoftwaretype'>Reference table</a>",
+	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/1/help/?param=platformsoftwaretype'>Reference table</a>",
 	"Match": "NAME",
 	"CSV field": "No",
 	"Comment": "",

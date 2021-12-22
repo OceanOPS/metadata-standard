@@ -2,7 +2,7 @@
 {
 	"OceanOPS metadata": "Deployment method",
 	"Database": "DEPL_METHOD, PTF.PTF_DEPLOYPMENT.depl_method_id",
-	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/preview/help/?param=deploymentmethod'>Reference table</a>",
+	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/1/help/?param=deploymentmethod'>Reference table</a>",
 	"Match": "NAME",
 	"CSV field": "DEPLOYMENT METHOD",
 	"Comment": "Description of the way the platform was deployed",
@@ -58,7 +58,7 @@
 {
 	"OceanOPS metadata": "Deployment ship",
 	"Database": "SHIP, PTF.PTF_DEPLOYMENT.ship_id",
-	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/preview/help/?param=ship'>Reference table</a>",
+	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/1/help/?param=ship'>Reference table</a>",
 	"Match": "REF / NAME (if unique)",
 	"CSV field": "DEPLOYMENT SHIP",
 	"Comment": "Ship that deployed the platform or ship on which the platform is installed. If the REF is unknown, a name can be given but probably require a validation through the interface when uploading the file. Mandatory for most of the networks to reach the minimum metadata standard.",
@@ -128,7 +128,7 @@
 {
 	"OceanOPS metadata": "Retrieval status",
 	"Database": "RETRIEVAL STATUS, PTF.RETRIEVAL.retrieval_status_id",
-	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/preview/help/?param=retrievalstatus'>Reference table</a>",
+	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/1/help/?param=retrievalstatus'>Reference table</a>",
 	"Match": "n/a",
 	"CSV field": "No",
 	"Comment": "Recovered, To recover",
@@ -142,7 +142,7 @@
 {
 	"OceanOPS metadata": "post retrieval status",
 	"Database": "POST_RETRIEVAL_STATUS, PTF.RETRIEVAL.post_retrieval_status_id",
-	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/preview/help/?param=postretrievalstatus'>Reference table</a>",
+	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/1/help/?param=postretrievalstatus'>Reference table</a>",
 	"Match": "n/a",
 	"CSV field": "No",
 	"Comment": "Status indicating what happened to the element after retrieval",
@@ -226,7 +226,7 @@
 {
 	"OceanOPS metadata": "Ending cause",
 	"Database": "ENDING_CAUSE, PTF.ending_cause_id",
-	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/preview/help/?param=endingcause'>Reference table</a>",
+	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/1/help/?param=endingcause'>Reference table</a>",
 	"Match": "NAME SHORT",
 	"CSV field": "ENDING CAUSE",
 	"Comment": "Reason why the platform is considered as closed (e.g. recovered, lost)",
@@ -240,7 +240,7 @@
 {
 	"OceanOPS metadata": "Retrieval ship",
 	"Database": "SHIP, PTF.RETIEVAL.ship_id",
-	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/preview/help/?param=ship'>Reference table</a>",
+	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/1/help/?param=ship'>Reference table</a>",
 	"Match": "REF / NAME (if unique)",
 	"CSV field": "RETRIEVAL SHIP",
 	"Comment": "Ship that recovered the platform. If the REF is unknown, a name can be given but probably require a validation through the interface when uploading the file.",
@@ -408,7 +408,7 @@
 {
 	"OceanOPS metadata": "Ship type",
 	"Database": "SHIP_TYPE, SHIP.ship_type_id",
-	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/preview/help/?param=shiptype'>Reference table</a>",
+	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/1/help/?param=shiptype'>Reference table</a>",
 	"Match": "n/a",
 	"CSV field": "SHIP VESSEL TYPE",
 	"Comment": "",
