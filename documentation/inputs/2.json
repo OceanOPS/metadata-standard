@@ -15,7 +15,7 @@
 },
 {
 	"OceanOPS metadata": "Agency",
-	"Database": "AGENCY, AGENCY_PTF.agency_id",
+	"Database": "AGENCY, PTF.AGENCY_PTF.agency_id",
 	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/1/help/?param=agency'>Reference table</a>",
 	"Match": "NAME_SHORT/REF",
 	"CSV field": "AGENCIES",
@@ -29,7 +29,7 @@
 },
 {
 	"OceanOPS metadata": "Agency's role",
-	"Database": "AGENCY_ROLE, AGENCY_PTF.agency_role_id",
+	"Database": "AGENCY_ROLE, PTF.AGENCY_PTF.agency_role_id",
 	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/1/help/?param=agencyrole'>Reference table</a>",
 	"Match": "NAME_SHORT (1)",
 	"CSV field": "AGENCY ROLES",
@@ -43,7 +43,7 @@
 },
 {
 	"OceanOPS metadata": "Contact",
-	"Database": "CONTACT, CONTACT_PTF_ROLE.contact_id",
+	"Database": "CONTACT, PTF.CONTACT_PTF_ROLE.contact_id",
 	"Format": "Reference table",
 	"Match": "EMAIL/ORCID",
 	"CSV field": "CONTRIBUTORS",
@@ -57,7 +57,7 @@
 },
 {
 	"OceanOPS metadata": "Contact's role",
-	"Database": "ROLE, CONTACT_PTF_ROLE.role_id",
+	"Database": "ROLE, PTF.CONTACT_PTF_ROLE.role_id",
 	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/1/help/?param=contactrole'>Reference table</a>",
 	"Match": "NAME_SHORT (2)",
 	"CSV field": "CONTRIBUTOR ROLES",

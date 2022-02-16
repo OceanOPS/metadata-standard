@@ -9,8 +9,8 @@
 	"Level": "C",
 	"References": "",
 	"Argo": "platform_number",
-	"Glider": "wmo_platfrom_code",
-	"OceanSITES": "wmo_platfrom_code",
+	"Glider": "wmo_platform_code",
+	"OceanSITES": "wmo_platform_code",
 	"SOT": "GTS-ID"
 },
 {

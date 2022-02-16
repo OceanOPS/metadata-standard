@@ -183,7 +183,7 @@
 },
 {
 	"OceanOPS metadata": "Cycle time (hours)",
-	"Database": "PTF_CONFIG.CONFIG.cycle_time",
+	"Database": "PTF.PTF_CONFIG.CONFIG.cycle_time",
 	"Format": "Decimal NUMBER(10,4)",
 	"Match": "n/a",
 	"CSV field": "CYCLE TIME",
@@ -197,7 +197,7 @@
 },
 {
 	"OceanOPS metadata": "Surface time (hours)",
-	"Database": "PTF_CONFIG.CONFIG.surface_time",
+	"Database": "PTF.PTF_CONFIG.CONFIG.surface_time",
 	"Format": "Decimal NUMBER(10,4)",
 	"Match": "n/a",
 	"CSV field": "SURFACE TIME",
@@ -211,7 +211,7 @@
 },
 {
 	"OceanOPS metadata": "Drift pressure (dbar)",
-	"Database": "PTF_CONFIG.CONFIG.drift_press",
+	"Database": "PTF.PTF_CONFIG.CONFIG.drift_press",
 	"Format": "Decimal NUMBER(9,4)",
 	"Match": "n/a",
 	"CSV field": "DRIFT PRESSURE",
@@ -225,7 +225,7 @@
 },
 {
 	"OceanOPS metadata": "Profile pressure (dbar)",
-	"Database": "PTF_CONFIG.CONFIG.profile_press",
+	"Database": "PTF.PTF_CONFIG.CONFIG.profile_press",
 	"Format": "Decimal NUMBER(9,4)",
 	"Match": "n/a",
 	"CSV field": "PROFILE PRESSURE",
@@ -239,7 +239,7 @@
 },
 {
 	"OceanOPS metadata": "Ice detection software (0/1)",
-	"Database": "PTF_CONFIG.CONFIG.ice_detection",
+	"Database": "PTF.PTF_CONFIG.CONFIG.ice_detection",
 	"Format": "Integer NUMBER(1,0)",
 	"Match": "n/a",
 	"CSV field": "No",
@@ -253,7 +253,7 @@
 },
 {
 	"OceanOPS metadata": "Level of automation",
-	"Database": "PTF_AUTOMATION / PTF.PTF_AUTOMATION.ref",
+	"Database": "PTF_AUTOMATION, PTF.PTF_AUTOMATION.ref",
 	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/1/help/?param=platformautomation'>Reference table</a>",
 	"Match": "REF",
 	"CSV field": "No",
@@ -267,8 +267,8 @@
 },
 {
 	"OceanOPS metadata": "Target inspection interval",
-	"Database": "PTF.service_schedule",
-	"Format": "ISO 8601",
+	"Database": "TIME_PERIOD, PTF.service_schedule_id",
+	"Format": "Reference table",
 	"Match": "n/a",
 	"CSV field": "TARGET INSPECTION INTERVAL",
 	"Comment": "",
@@ -281,8 +281,8 @@
 },
 {
 	"OceanOPS metadata": "Schedule of observation",
-	"Database": "PTF_CONFIG.CONFIG.obs_schedule",
-	"Format": "ISO 8601",
+	"Database": "TIME_PERIOD, PTF.PTF_CONFIG.CONFIG.obs_schedule_id",
+	"Format": "Reference table",
 	"Match": "n/a",
 	"CSV field": "SCHEDULE OF OBSERVATION",
 	"Comment": "",
@@ -295,7 +295,7 @@
 },
 {
 	"OceanOPS metadata": "Maintenance activity / Programme",
-	"Database": "SERVICE.program_id",
+	"Database": "PROGRAM, SERVICE.program_id (SERVICE.ptf_id)",
 	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/1/help/?param=program'>Reference table</a>",
 	"Match": "NAME",
 	"CSV field": "MAINTENANCE ACTIVITY",
@@ -309,7 +309,7 @@
 },
 {
 	"OceanOPS metadata": "Maintenance activity / Type",
-	"Database": "SERVICE.service_type_id",
+	"Database": "SERVICE_TYPE, SERVICE.service_type_id (SERVICE.ptf_id)",
 	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/1/help/?param=servicetype'>Reference table</a>",
 	"Match": "NAME",
 	"CSV field": "MAINTENANCE ACTIVITY",
@@ -323,8 +323,8 @@
 },
 {
 	"OceanOPS metadata": "Maintenance activity / location",
-	"Database": "SERVICE.location",
-	"Format": "Values ('on-site','remote')",
+	"Database": "SERVICE_LOCATION, SERVICE.location_id (SERVICE.ptf_id)",
+	"Format": "Reference table",
 	"Match": "n/a",
 	"CSV field": "MAINTENANCE ACTIVITY",
 	"Comment": "Maintenance activity has 4 sub-fields in the CSV.",
@@ -337,8 +337,8 @@
 },
 {
 	"OceanOPS metadata": "Maintenance activity / Date",
-	"Database": "SERVICE.start_date",
-	"Format": "ISO 8601",
+	"Database": "SERVICE.start_date (SERVICE.ptf_id)",
+	"Format": "<a target='_blank' href='https://en.wikipedia.org/wiki/ISO_8601'>ISO 8601</a>",
 	"Match": "n/a",
 	"CSV field": "MAINTENANCE ACTIVITY",
 	"Comment": "Maintenance activity has 4 sub-fields in the CSV.",
@@ -365,7 +365,7 @@
 },
 {
 	"OceanOPS metadata": "Battery pack",
-	"Database": "PTF_BATTERY, PTF.PTF_HARDWARE.battery_pack",
+	"Database": "PTF.PTF_HARDWARE.battery_pack",
 	"Format": "Free text",
 	"Match": "n/a",
 	"CSV field": "BATTERY PACK",
@@ -379,7 +379,7 @@
 },
 {
 	"OceanOPS metadata": "Special feature",
-	"Database": "PTF_BATTERY, PTF.PTF_HARDWARE.special_feature",
+	"Database": "PTF.PTF_HARDWARE.special_feature",
 	"Format": "Free text",
 	"Match": "n/a",
 	"CSV field": "SPECIAL FEATURE",
@@ -450,7 +450,7 @@
 {
 	"OceanOPS metadata": "Hardware manufacturer date",
 	"Database": "PTF.PTF_HARDWARE.manuf_date",
-	"Format": "ISO 8601",
+	"Format": "<a target='_blank' href='https://en.wikipedia.org/wiki/ISO_8601'>ISO 8601</a>",
 	"Match": "n/a",
 	"CSV field": "HARDWARE MANUF DATE",
 	"Comment": "",

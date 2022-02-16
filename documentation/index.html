@@ -11,11 +11,14 @@
    	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"	crossorigin="anonymous">
-	<script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v0.4.1/dist/bootstrap-toc.min.css">
-	<script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v0.4.1/dist/bootstrap-toc.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 	
+	<link
+	  rel="stylesheet"
+	  href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
+	/>
+	<script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
 	<style>
 		   	
 		@font-face {
@@ -36,8 +39,8 @@
 		
 		body{
 			font-family: 'Montserrat-Regular', sans-serif;
-			font-size: 1.7em;
-        counter-reset: h2counter;
+			/*font-size: 1.7em;*/
+			counter-reset: h2counter;
 		}
 
 		h1, h2, h3, h4 {
@@ -151,9 +154,9 @@
 		  color: rgb(3,21,57);
 		  border-left: solid 2px rgb(40,157,222);
 		}
-
-		nav[data-toggle='toc'] {
-		  margin-top: 30px;
+		
+		nav[data-toggle="toc"] {
+		  top: 30px;
 		}
 		
 		.img-subtitle{
@@ -164,24 +167,21 @@
 			font-weight: bold;
 		}
 		
-		.table-center{
-		
-		}
 		
 		.table-center td {
-		   text-align: center;   
+		   text-align: center !important;   
 		}
 		
 		.table-center th {
-		   text-align: center;   
+		   text-align: center !important;   
 		}
 		
 		.table-sm td{
-			font-size: 12px;
+			font-size: 12px !important;
 		}
 		
 		.table-sm th{
-			font-size: 12px;
+			font-size: 12px !important;
 		}
 		
 		.activated{
@@ -191,61 +191,15 @@
 		button{
 			outline: none !important;
 		}
-		
-		.td-blue{
-			background-color: #f1f8ff;
-		}
-		
-		.td-pink{
-			background-color: #fff5fb;
-		}
-		
-		.td-green{
-			background-color: #f4fff2;
-		}
-		
-		.th-blue{
-			background-color: #b8dcff;
-		}
-		
-		.th-pink{
-			background-color: #ffdcf2;
-		}
-		
-		.th-green{
-			background-color: #b7f0ba;
-		}
-		
-		.th-orange{
-			background-color: #ffd7a1;
-			font-weight: bold;
-			font-size: 14px !important;
-		}
-		
-		.th-turquoise{
-			background-color: #74d3e0;
-			font-weight: bold;
-			font-size: 14px !important;
-		}
-		
-		.th-darkgreen{
-			background-color: #48bb99;
-		}
-		
-		.th-red{
-			background-color: #d87575;
-		}
-		
-		.td-white{
-			background-color: #ffffff;
-		}
-		
+				
+		table  { border-collapse: collapse; width: 100%; }
 		.tableFixHead          { overflow: auto; max-height: 100vh;}  
-		.tableFixHead thead th { position: sticky; top: 0; z-index: 1; }  
+		.tableFixHead thead th { position: sticky; top: 0; z-index: 1;}  
 		.tableFixHead tbody th { position: sticky; left: 0; }  
 		
 		#tableInputs{
-			background-color: white;
+			background-color: white !important;
+			padding: 20px;
 		}
 		
 		/* small screens */
@@ -255,16 +209,24 @@
 			position: static;
 		  }
 
-		  /* PICK ONE */
 		  /* don't expand nested items, which pushes down the rest of the page when navigating */
 		  nav[data-toggle='toc'] .nav .active .nav {
 			display: none;
 		  }
-		  /* alternatively, if you *do* want the second-level navigation to be shown (as seen on this page on mobile), use this */
-		  nav[data-toggle='toc'] .nav .nav {
-			display: block;
-		  }
 		}
+		
+		a.linkMinifiedImage p {
+			text-align: center;
+		}
+		
+		a.linkMinifiedImage p img{
+			width: 40%;
+		}
+		
+		.tooltip-inner {
+			max-width: 350px;
+		}
+				
 	</style>
 
 	<script>
@@ -272,15 +234,15 @@
 			var navSelector = '#toc';
 			var $myNav = $(navSelector);
 			Toc.init($myNav);
-			$('body').scrollspy({
-				target: navSelector
-			});
+			var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+			  target: navSelector
+			})
 		});
 		
 	</script>
 
 </head>	
-<body data-spy="scroll" data-target="#toc">
+<body>
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -291,10 +253,10 @@
 	</nav>
 	<div id="main-container" class="container-fluid">
 		<div class="row">
-			<div class="col-sm-3" id="left-side-container">
-				<nav id="toc" data-spy="affix"></nav>
+			<div class="col-xl-2" id="left-side-container">
+				<nav id="toc" data-spy="affix" class="sticky-top"></nav>
 			</div>
-			<div class="col-sm-9 col-lg-8">
+			<div class="col-xl-10">
 								
 				<h2 class="title-border-bottom">Background</h2>
 				<div class="container-fluid" style="margin-top: 30px;">
@@ -459,7 +421,7 @@
 										<th><a target="_blank" href="https://www.ocean-ops.org/api/1/help/?param=country">Country</a> (**)</th>
 										<td>
 											The country list used by OceanOPS is a union of the member state lists of the 
-											IOC-UNESCO and the WMO, plus 'Europe'. <a target="_blank" href="https://fr.wikipedia.org/wiki/ISO_3166-1">ISO 3166-1</a> is used to identify them.<br><br>
+											IOC-UNESCO and the WMO, plus 'Europe'. <a target="_blank" href="https://en.wikipedia.org/wiki/ISO_3166-1">ISO 3166-1</a> is used to identify them.<br><br>
 											Countries can be grouped according to different criteria, e.g.:<br>
 											<ul>
 												<li>IOC member group</li>
@@ -522,7 +484,7 @@
 										<td>Station (VOS), Observing facility/platform/station (WIGOS)</td>
 										<td></td>
 									</tr>
-									<tr>
+									<tr id="conceptPTFModel">
 										<th><a target="_blank" href="https://www.ocean-ops.org/api/1/help/?param=platformmodel">Platform model</a></th>
 										<td>
 											The most detailed level of categorization of a platform, ideally containing manufacturer’s information and product reference.
@@ -729,7 +691,7 @@
 												<li>A retrieval ship</li>
 												<li>A retrieval ship</li>
 												<li><a target="_blank" href="https://www.ocean-ops.org/arcgisserver/rest/services/Commons/CRUISE_LINE/MapServer/0">A retrieval cruise</a></li>
-												<li>A retrieval <a target="_blank" href="https://fr.wikipedia.org/wiki/ISO_3166-1">country</a></li>
+												<li>A retrieval <a target="_blank" href="https://en.wikipedia.org/wiki/ISO_3166-1">country</a></li>
 											</ul>
 										</td>
 										<td>Recovery</td>
@@ -1054,102 +1016,106 @@
 					</p>
 					<div class="table-responsive">
 					<table class="table table-center table-bordered table-sm">
-						<tr>
-							<th></th>
-							<th>Argo<br>Core,&nbsp;BGC,&nbsp;Deep</th>
-							<th>OceanGliders</th>
-							<th>SOT<br>VOS,&nbsp;ASAP</th>
-							<th>SOT<br>SOOP</th>
-							<th>OceanSITES</th>
-							<th>DBCP<br>DB</th>
-							<th>DBCP<br>MB</th>
-							<th>AniBOS</th>
-							<th>GO-SHIP</th>
-							<th>GLOSS</th>
-							<th>Ship Cruises</th>
-							<th>HF Radars</th>
-							<th>OceanOPS (other platforms / integrated)</th>
-						</tr>
-						<tr>
-							<td>OceanOPS web</td>
-							<td>***</td>
-							<td>***</td>
-							<td>*(**)</td>
-							<td>*(**)</td>
-							<td>**(*)</td>
-							<td>***</td>
-							<td>**(*)</td>
-							<td>*</td>
-							<td>**</td>
-							<td>*</td>
-							<td>**</td>
-							<td>*</td>
-							<td>**(*)</td>
-						</tr>
-						<tr>
-							<td>OceanOPS CSV file</td>
-							<td>***</td>
-							<td>***</td>
-							<td>*(**)</td>
-							<td>*(**)</td>
-							<td>**(*)</td>
-							<td>***</td>
-							<td>**(*)</td>
-							<td>*</td>
-							<td>**</td>
-							<td>*</td>
-							<td>**</td>
-							<td>*</td>
-							<td>**(*)</td>
-						</tr>							
-						<tr>
-							<td>NetCDF file</td>
-							<td><a href="http://dx.doi.org/10.13155/29825" target="_blank">**(*)<br>V2.2,&nbsp;3.1</a></td>
-							<td>***<br>beta&nbsp;1.0</td>
-							<td></td>
-							<td></td>
-							<td><a href="http://www.oceansites.org/docs/oceansites_data_format_reference_manual.pdf" target="_blank">(***)</a></td>
-							<td><a href="https://doi.org/10.13155/81638" target="_blank">(***)</a></td>
-							<td></td>
-							<td>Planned</td>
-							<td>Planned?</td>
-							<td>?</td>
-							<td></td>
-							<td>?</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>API feed</td>
-							<td>EuroArgo monitoring</td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td>SIO planned</td>
-							<td></td>
-							<td></td>
-							<td>(CCHDO)</td>
-							<td></td>
-							<td>MFP&nbsp;R/V&nbsp;cruises piloting&nbsp;(UK)</td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>Other formats</td>
-							<td>**(*)<br>US metafile&nbsp;v1,&nbsp;v2</td>
-							<td>***<br>Coriolis JSON&nbsp;v1.2,&nbsp;<a href="https://www.oceangliders.org/wp-content/uploads/2020/02/guidelines_to_fill_a_json_file_v1.3.1.docx" target="_blank">v1.3</a></td>
-							<td>PUB47<br>to be deprecated</td>
-							<td></td>
-							<td></td>
-							<td>**(*)<br>AOML deployment log</td>
-							<td>Excel<br>DEPRECATED</td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-						</tr>						
+						<thead>
+							<tr>
+								<th></th>
+								<th>Argo<br>Core,&nbsp;BGC,&nbsp;Deep</th>
+								<th>OceanGliders</th>
+								<th>SOT<br>VOS,&nbsp;ASAP</th>
+								<th>SOT<br>SOOP</th>
+								<th>OceanSITES</th>
+								<th>DBCP<br>DB</th>
+								<th>DBCP<br>MB</th>
+								<th>AniBOS</th>
+								<th>GO-SHIP</th>
+								<th>GLOSS</th>
+								<th>Ship Cruises</th>
+								<th>HF Radars</th>
+								<th>OceanOPS (other platforms / integrated)</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>OceanOPS web</td>
+								<td>***</td>
+								<td>***</td>
+								<td>*(**)</td>
+								<td>*(**)</td>
+								<td>**(*)</td>
+								<td>***</td>
+								<td>**(*)</td>
+								<td>*</td>
+								<td>**</td>
+								<td>*</td>
+								<td>**</td>
+								<td>*</td>
+								<td>**(*)</td>
+							</tr>
+							<tr>
+								<td>OceanOPS CSV file</td>
+								<td>***</td>
+								<td>***</td>
+								<td>*(**)</td>
+								<td>*(**)</td>
+								<td>**(*)</td>
+								<td>***</td>
+								<td>**(*)</td>
+								<td>*</td>
+								<td>**</td>
+								<td>*</td>
+								<td>**</td>
+								<td>*</td>
+								<td>**(*)</td>
+							</tr>							
+							<tr>
+								<td>NetCDF file</td>
+								<td><a href="http://dx.doi.org/10.13155/29825" target="_blank">**(*)<br>V2.2,&nbsp;3.1</a></td>
+								<td>***<br>beta&nbsp;1.0</td>
+								<td></td>
+								<td></td>
+								<td><a href="http://www.oceansites.org/docs/oceansites_data_format_reference_manual.pdf" target="_blank">(***)</a></td>
+								<td><a href="https://doi.org/10.13155/81638" target="_blank">(***)</a></td>
+								<td></td>
+								<td>Planned</td>
+								<td>Planned?</td>
+								<td>?</td>
+								<td></td>
+								<td>?</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>API feed</td>
+								<td>EuroArgo monitoring</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>SIO planned</td>
+								<td></td>
+								<td></td>
+								<td>(CCHDO)</td>
+								<td></td>
+								<td>MFP&nbsp;R/V&nbsp;cruises piloting&nbsp;(UK)</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Other formats</td>
+								<td>**(*)<br>US metafile&nbsp;v1,&nbsp;v2</td>
+								<td>***<br>Coriolis JSON&nbsp;v1.2,&nbsp;<a href="https://www.oceangliders.org/wp-content/uploads/2020/02/guidelines_to_fill_a_json_file_v1.3.1.docx" target="_blank">v1.3</a></td>
+								<td>PUB47<br>to be deprecated</td>
+								<td></td>
+								<td></td>
+								<td>**(*)<br>AOML deployment log</td>
+								<td>Excel<br>DEPRECATED</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>	
+						</tbody>
 					</table>
 					</div>
 					<br>
@@ -1162,17 +1128,17 @@
 					<p>
 						<ol style="line-height: 180%;">
 							<li>&nbsp Create an account on <a target="_blank" href="https://www.ocean-ops.org/board">ocean-ops.org</a> if not done yet. Cf. <a href="https://www.ocean-ops.org/metadata/#user-account-and-edit-rights">user account and edit rights</a>.</li>
-							<li>&nbsp Get in touch with OceanOPS team to determine under which program(s) your elements will be saved 
+							<li>&nbsp Contact OceanOPS team to determine under which program(s) your elements will be saved 
 							and thus giving your edit rights where appropriate. Contact points and agencies involved will be tagged 
 							under the program elements. Cf. <a href="https://www.ocean-ops.org/metadata/#oceanops-program-set-up">program set up</a>.
 							</li>
 							<li>&nbsp You can now register/edit your elements under the program(s) you are associated with. Several cases:</li>
 							<ol type="a">
 								<li>&nbspYou want to submit elements and you want a GTS identifier. Fill in the information OceanOPS requires 
-									(web form or CSV) and get in return the GTS identifier(s) (i.e., WMO codes), OceanOPS reference and WIGOS identifier(s).
+									(Cf. <a href="#howtorequestids">How to use the Request Identifiers interface</a>) and get in return the GTS identifier(s) (i.e., WMO codes), OceanOPS reference(s) and WIGOS identifier(s).
 								</li>
 								<li>&nbspYou already have element(s) with corresponding GTS identifier(s) and want to submit them to OceanOPS. 
-									Fill in the information OceanOPS requires (web form or CSV) and get in return the OceanOPS reference and 
+									Fill in the information OceanOPS requires (web form or CSV) and get in return the OceanOPS reference(s) and 
 									WIGOS identifier(s). This case will slowly be deprecated since OceanOPS metadata submission will allocate 
 									the WMO code (cf. previous item).
 								</li>
@@ -1180,14 +1146,14 @@
 									OceanOPS requires (web edit form or CSV), specifying OceanOPS reference as the mapping key.
 								</li>
 							</ol>
-							<li>&nbsp;If the format is stable, accepted, and its vocabulary (content) controlled (i.e. uploading the file on the interface requires no manual intervention prior to submission), a machine to machine exchange can be set up.</li>
+							<li>&nbsp;If the format is stable, accepted, and its vocabulary (content) controlled (i.e. uploading the file on the interface requires no manual intervention prior to submission), a machine-to-machine exchange can be set up.</li>
 						</ol>
 					</p>
 					<p>
 					<emph>Challenge:</emph> ideally metadata must be available together with data (in the same file or aside) to users. 
 					However, OceanOPS needs metadata ahead of the operations and independently from observations published. 
 					In other words, OceanOPS cannot wait data to be released to get the metadata unless this is very close from first observation time. 
-					Also if OceanOPS monitors only the system from available data, it has no means to encourage operators to release data for instrument operating or to be operating. 
+					Also, if OceanOPS monitors only the system from available data, it has no means to encourage operators to release data for instrument operating or to be operating. 
 					If the data format (often netCDF) is the only format available to share metadata then it must be filled in before data are published.
 					</p>
 					<p>
@@ -1196,24 +1162,181 @@
 					<h3>Reference/WMO/WIGOS identifiers</h3>
 					<h4>Preliminary workflow</h4>
 					<p>
-						Requesting new WMO identifiers will be done through the submission mechanism described above. Their allocation will trigger the allocation of a WIGOS idenfifier and an OceanOPS reference.
-						It won't be necessary to request batches of IDs for years to come, they will be randomly allocated (following a minimal pattern) on the fly while creating records in the system.
+						Requesting new WMO identifiers will be done through the submission mechanism described above. Their allocation will trigger the allocation of a WIGOS identifier and an OceanOPS reference.
+						It will not be necessary to request batches of IDs for years to come, they will be randomly allocated (following a minimal pattern) on the fly while creating records in the system.
 						Batches will still be allocated for planning activities, with the minimum metadata required being the program. 
-						However a recycling process will be set up to release unused identifiers (with no further metadata provided/no observations).
+						However, a recycling process will be set up to release unused identifiers (with no further metadata provided/no observations). Users will be/are allowed to request batches of new identifiers themselves. See <a href="#howtorequestids">How to use the Request Identifiers interface</a> for a detailed description of the web form. 
 					</p>
 					<h4>Implementation timeline</h4>
 					<p>
 						<ul>
 							<li>September 2021: backend development</li>
 							<li>October 2021: frontend development and documentation</li>
-							<li>November 2021: pilot tests with some proprams</li>
-							<li>December 2021: circular letter by WMO to announce the new service</li>
-							<li>January 2022: service operational</li>
+							<li>On-going: pilot tests with some programs</li>
+							<li>TBD: circular letter by WMO to announce the new service</li>
+							<li>TBD: service operational</li>
 						</ul>
 					</p>
-					<h4>WIGOS identifiers and new WMO identifier allocation scheme</h4>
+					<h4 id="allocationScheme">WIGOS identifiers and new WMO identifier allocation scheme</h4>
 					The new scheme to allocate WMO identifiers/codes is not yet operational nor officialized, but the following working document contains the rules that will be implemented through the automation of allocation at OceanOPS:
 					<a target='_blank' href='WSI_Ocean-DRAFT.pdf'>WSI_Ocean-DRAFT.pdf</a>
+					<h4 id="howtorequestids">How to use the Request Identifiers interface </h4> 
+					<p>
+					<i>N.B.: Currently, a restricted group of users can access the beta version of the IDs request tool. 
+					When tested and validated, the interface will be opened to a larger group of users. </i>
+					</p>
+					<p>
+					The tool enables user to request batches of platform identifiers (GTS/WMO and WIGOS IDs) for instruments that are at least funded. 
+					The user can request from 1 to a maximum of 100 identifiers at a time. 
+					</p>
+					<p>
+					Core metadata is required to get a draft list of records, automatically generated by the interface. 
+					Then, this list is easily customizable by the user, before submitting the request to book the batch of IDs. 
+					</p>
+					<p>
+					Once the request is validated and submitted, the platforms will be registered in the OceanOPS system with the “PROBABLE” status. 
+					Each set of records sharing the same <a href="#conceptPTFModel">model</a> within a request will be assigned with a batch reference. 
+					</p>
+					<p>
+					To keep track of their IDs request, the user can receive an email with the list of WMO IDs, and/or download a csv file with all the information. 
+					The user can also find the platforms through the OceanOPS search engine. 
+					The results of this request can be used as a basis for updating the records when needed (through the web form or uploading the CSV, updating with more metadata). 
+					</p>
+					
+					<br>
+					<p>
+					Identifiers allocation rules: 
+						<ul>
+							<li>Identifiers will follow the <a href="#allocationScheme">allocation scheme</a> and then will be randomly generated: if several identifiers are requested at a time, they will not follow each other (not a sequence). </li>
+							<li>The identifiers generated are reserved for a certain time. If they are not used in the OceanOPS system over this period, they will be recycled.</li>
+						</ul>
+					</p>
+					<br>
+					<p>
+					Here are the detailed steps to follow to request ID(s): 
+						<ol style="line-height: 180%;">
+							<li>&nbsp Go to the OceanOPS website, on the appropriate observing system environment (Argo, DBCP,…). </li>
+							<li>&nbsp To access the “Request IDs” tool, you need to be logged in and declared as a contact point of the program relevant to your request. 
+							Cf. <a href="https://www.ocean-ops.org/metadata/#user-account-and-edit-rights">user account and edit rights</a>. </li>
+							<li>&nbsp In the top toolbar on the OceanOPS website, click on “Submit” and “Request IDs” to access the web form: 
+								<br>
+								<a class="linkMinifiedImage" href='#' data-bs-toggle="modal" data-bs-target="#modalimg-requestIDs1">
+									<p><img src="img/requestIDs1.png"/></p>
+								</a>
+								<div class="modal" id="modalimg-requestIDs1" tabindex="-1">
+								  <div class="modal-dialog modal-xl">
+									<div class="modal-content">
+									  <div class="modal-header">
+										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+									  </div>
+									  <div class="modal-body">
+										<img src="img/requestIDs1.png" class="img-fluid">
+									  </div>
+									  <div class="modal-footer"></div>
+									</div>
+								  </div>
+								</div>							
+							</li>
+								<ul>
+									<li><p>Step 1: Select values</p>
+											The program and deployment date (UTC) are mandatory fields. 
+											The model of the platform, if not filled in, will be inferred from the program information 
+											(The definition of an OceanOPS program contains necessarily a generic platform model). 
+											You can also submit a specific platform model, the deployment position (latitude and longitude), and the batch status (FUNDED, IN STOCK or ORDERED). 
+											Deployment information (date, latitude, longitude) can be first filled in as assumed/expected information and updated when confirmed. 
+										<br>
+											In the “Amount of IDs to request” field, put the number of needed identifiers, from 1 to a maximum of 100 requests at a time. 
+											This will generate a preview of this number of records (with default values as filled in previously), pending submission, allowing you to customize every entry.
+											<a class='linkMinifiedImage' href="#" data-bs-toggle="modal" data-bs-target="#modalimg-requestIDs2">
+												<p><img src="img/requestIDs2.png"/></p>
+											</a>											
+											<div class="modal" id="modalimg-requestIDs2" tabindex="-1">
+											  <div class="modal-dialog modal-xl">
+												<div class="modal-content">
+												  <div class="modal-header">
+													<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+												  </div>
+												  <div class="modal-body">
+													<img src="img/requestIDs2.png" class="img-fluid">
+												  </div>
+												  <div class="modal-footer"></div>
+												</div>
+											  </div>
+											</div>
+									</li>
+									<li><p>Step 2: Customize</p>
+										In step 2, you can customize the metadata of each line/record that corresponds to one IDs request: 
+										click on the metadata you want to specify, enter the new value, and validate your update. 											
+										<a class='linkMinifiedImage' href="#" data-bs-toggle="modal" data-bs-target="#modalimg-requestIDs3">
+											<p><img src="img/requestIDs3.png"/></p>
+										</a>											
+										<div class="modal" id="modalimg-requestIDs3" tabindex="-1">
+										  <div class="modal-dialog modal-xl">
+											<div class="modal-content">
+											  <div class="modal-header">
+												<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+											  </div>
+											  <div class="modal-body">
+												<img src="img/requestIDs3.png" class="img-fluid">
+											  </div>
+											  <div class="modal-footer"></div>
+											</div>
+										  </div>
+										</div>	
+																			
+										<a class='linkMinifiedImage' href="#" data-bs-toggle="modal" data-bs-target="#modalimg-requestIDs4">
+											<p><img src="img/requestIDs4.png"/></p>
+										</a>											
+										<div class="modal" id="modalimg-requestIDs4" tabindex="-1">
+										  <div class="modal-dialog modal-xl">
+											<div class="modal-content">
+											  <div class="modal-header">
+												<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+											  </div>
+											  <div class="modal-body">
+												<img src="img/requestIDs4.png" class="img-fluid">
+											  </div>
+											  <div class="modal-footer"></div>
+											</div>
+										  </div>
+										</div>
+									</li>
+									<li><p>Step 3: Submit request</p>
+										<p>
+											Once the customization table is checked and up to date, you can submit your request. 
+										</p>
+									</li>
+									<li><p>Step 4: View results</p>
+										<p>
+											The result of your request will be visible in the same interface. 
+											You can also access the information on your request: 
+												<ul>
+													<li>
+														In an email, with the complete list of WMO IDs generated by your request. 
+														You can choose to receive this confirmation email at step 3 (the process will send the email if not specified otherwise). 
+													</li>
+													<li>
+														In a csv file, that you can download in step 4, with core information: 
+														program, platform model, deployment date, platform serial number, internal identifier, platform reference, deployment latitude, deployment longitude, WMO ID, WIGOS ID, batch request reference. 
+													</li>
+												</ul>
+
+										</p>
+										<p>
+											This csv file can be used as a basis to update the metadata in the OceanOPS database by updating existing fields 
+											(e.g., deployment date, deployment latitude, deployment longitude), 
+											or by adding new ones (e.g., sensor model details and telecom information). The platform reference will be the mapping key to update platform metadata. 
+											Every record freshly created can now be edited through a web form as well.
+										</p>
+									</li>
+								</ul>
+						</ol>
+					
+					
+					
+					
+					
+					
 				</div>
 				
 				<h2 id='InputsTableSection' class="title-border-bottom">Exhaustive list of inputs</h2>
@@ -1240,18 +1363,25 @@
 					</p>
 				</div>
 				<div class="btn-group" role="group" aria-label="...">
-				  <button id="table1-btn" type="button" class="btn btn-default activated" onclick="toggleTables(1);">1. GENERAL DESCRIPTION</button>
-				  <button id="table2-btn" type="button" class="btn btn-default" onclick="toggleTables(2);">2. IMPLEMENTERS</button>
-				  <button id="table3-btn" type="button" class="btn btn-default" onclick="toggleTables(3);">3. IDENTIFIERS</button>
-				  <button id="table4-btn" type="button" class="btn btn-default" onclick="toggleTables(4);">4. OPERATIONS</button>
-				  <button id="table5-btn" type="button" class="btn btn-default" onclick="toggleTables(5);">5. VARIABLES</button>
-				  <button id="table6-btn" type="button" class="btn btn-default" onclick="toggleTables(6);">6. HARDWARE</button>
+				  <button id="table1-btn" type="button" class="btn btn-sm btn-outline-secondary activated" onclick="toggleTables(1);">1. GENERAL DESCRIPTION</button>
+				  <button id="table2-btn" type="button" class="btn btn-sm btn-outline-secondary" onclick="toggleTables(2);">2. IMPLEMENTERS</button>
+				  <button id="table3-btn" type="button" class="btn btn-sm btn-outline-secondary" onclick="toggleTables(3);">3. IDENTIFIERS</button>
+				  <button id="table4-btn" type="button" class="btn btn-sm btn-outline-secondary" onclick="toggleTables(4);">4. OPERATIONS</button>
+				  <button id="table5-btn" type="button" class="btn btn-sm btn-outline-secondary" onclick="toggleTables(5);">5. VARIABLES</button>
+				  <button id="table6-btn" type="button" class="btn btn-sm btn-outline-secondary" onclick="toggleTables(6);">6. HARDWARE</button>
 				</div>
 			</div>
 		</div>
 		
 		<div style="text-align: right;">
-			<select name="level" id="level-select">
+			<select name="type" id="operation-type-select" style="margin-right: 30px;display: none;">
+				<option value="">--Filter by operation type--</option>
+				<option value="">No filter</option>
+				<option value="Deployment">Deployment</option>
+				<option value="Ship">Ship</option>
+				<option value="Retrieval">Retrieval</option>
+			</select>
+			<select name="level" id="level-select" style="margin-right: 20px;">
 				<option value="">--Filter by metadata level--</option>
 				<option value="">No filter</option>
 				<option value="O">O</option>
@@ -1260,173 +1390,164 @@
 				<option value="M">M</option>
 			</select>
 		</div>
-		
-		<div class="row">
-			<div class="col-sm-12 offset-sm-3" style="padding: 20px;" id="tableInputs">
-				<div class="table-responsive tableFixHead" id="table-1">
-					<table class="table table-striped table-bordered table-sm">
-						<thead>
-							<tr>
-								<th class="th-blue">OceanOPS metadata</th>
-								<th class="th-blue">OceanOPS database location</th>
-								<th class="th-blue">Format</th>
-								<th class="th-blue">Matching field/key</th>
-								<th class="th-blue">OceanOPS CSV default field</th>
-								<th class="th-blue">Known aliases</th>
-								<th class="th-blue">Comment</th>
-								<th class="th-blue">Metadata level</th>
-								<th class="th-pink">References</th>
-								<th class="th-green">Argo</th>
-								<th class="th-green">Glider</th>
-								<th class="th-green">OceanSITES</th>
-								<th class="th-green">SOT</th>
-							</tr>
-						</thead>
-						<tbody id="table1-body">
-						</tbody>
-					</table>	
-				</div>
-				
-				<div class="table-responsive tableFixHead" id="table-2" style="display: none;">
-					<table class="table table-striped table-bordered table-sm">
-						<thead>
-							<tr>
-								<th class="th-blue">OceanOPS metadata</th>
-								<th class="th-blue">OceanOPS database location</th>
-								<th class="th-blue">Format</th>
-								<th class="th-blue">Matching field/key</th>
-								<th class="th-blue">OceanOPS CSV default field</th>
-								<th class="th-blue">Known aliases</th>
-								<th class="th-blue">Comment</th>
-								<th class="th-blue">Metadata level</th>
-								<th class="th-pink">References</th>
-								<th class="th-green">Argo</th>
-								<th class="th-green">Glider</th>
-								<th class="th-green">OceanSITES</th>
-								<th class="th-green">SOT</th>
-							</tr>
-						</thead>
-						<tbody id="table2-body">
-						</tbody>
-					</table>	
-					<p style="font-size: 12px;">
-						(1) Agency roles should follow the same order as the Agencies listed in 'AGENCIES' field: the first role encountered will be attached to the first agency listed.
-					</p>	
-					<p style="font-size: 12px;">
-						(2) Contributor roles should follow the same order as the contributors listed in 'CONTRIBUTORS' field: the first role encountered will be attached to the first contributor listed.
-					</p>
-				</div>
-								
-				<div class="table-responsive tableFixHead" id="table-3" style="display: none;">
-					<table class="table table-striped table-bordered table-sm">
-						<thead>
-							<tr>
-								<th class="th-blue">OceanOPS metadata</th>
-								<th class="th-blue">OceanOPS database location</th>
-								<th class="th-blue">Format</th>
-								<th class="th-blue">Matching field/key</th>
-								<th class="th-blue">OceanOPS CSV default field</th>
-								<th class="th-blue">Known aliases</th>
-								<th class="th-blue">Comment</th>
-								<th class="th-blue">Metadata level</th>
-								<th class="th-pink">References</th>
-								<th class="th-green">Argo</th>
-								<th class="th-green">Glider</th>
-								<th class="th-green">OceanSITES</th>
-								<th class="th-green">SOT</th>
-							</tr>
-						</thead>
-						<tbody id="table3-body">
-						</tbody>
-					</table>	
-				</div>
-								
-				<div class="table-responsive tableFixHead" id="table-4" style="display: none;">
-					<table class="table table-striped table-bordered table-sm">
-						<thead>
-							<tr>
-								<th class="th-blue">OceanOPS metadata</th>
-								<th class="th-blue">OceanOPS database location</th>
-								<th class="th-blue">Format</th>
-								<th class="th-blue">Matching field/key</th>
-								<th class="th-blue">OceanOPS CSV default field</th>
-								<th class="th-blue">Known aliases</th>
-								<th class="th-blue">Comment</th>
-								<th class="th-blue">Metadata level</th>
-								<th class="th-pink">References</th>
-								<th class="th-green">Argo</th>
-								<th class="th-green">Glider</th>
-								<th class="th-green">OceanSITES</th>
-								<th class="th-green">SOT</th>
-							</tr>
-						</thead>
-						<tbody id="table4-body">
-						</tbody>
-					</table>	
-				</div>
-																
-				<div class="table-responsive tableFixHead" id="table-5" style="display: none;">
-					<p style="font-size: 12px;">
-						In order to handle multiple sensor information, every information describing the sensors/variables are organised into sub-cell within a CSV value. 
-						All values must contain the same number of sub-cells and respecting the same order, including empty ones.
-						For example, if a record contains three sensors and serial numbers for the first and second, the CSV file should be filled as follows: 
-						SENSOR_MODELS = "SENSOR1,SENSOR2,SENSOR3", SENSOR_SERIALS = "SERIAL1,,SERIAL3".
-					</p>	
-					<p style="font-size: 12px;">
-						A sensor information will indicate that the record is able to measure all the default variables linked to that sensor model.
-						If the sensor is not measuring all the default variables or a per-variable customization is required, sub-cells must be repeated for each specified variables. 
-						The example above, with "SENSOR1" being customized for two variables, would become:
-						SENSOR_MODELS = "VARIABLE1:SENSOR1,VARIABLE2:SENSOR1,SENSOR2,SENSOR3", SENSOR_SERIALS = "SERIAL1,SERIAL1,,SERIAL3".
-					</p>
-					<table class="table table-striped table-bordered table-sm">
-						<thead>
-							<tr>
-								<th class="th-blue">OceanOPS metadata</th>
-								<th class="th-blue">OceanOPS database location</th>
-								<th class="th-blue">Format</th>
-								<th class="th-blue">Matching field/key</th>
-								<th class="th-blue">OceanOPS CSV default field</th>
-								<th class="th-blue">Known aliases</th>
-								<th class="th-blue">Comment</th>
-								<th class="th-blue">Metadata level</th>
-								<th class="th-pink">References</th>
-								<th class="th-green">Argo</th>
-								<th class="th-green">Glider</th>
-								<th class="th-green">OceanSITES</th>
-								<th class="th-green">SOT</th>
-							</tr>
-						</thead>
-						<tbody id="table5-body">
-						</tbody>
-					</table>				
-				</div>
-				
-				<div class="table-responsive tableFixHead" id="table-6" style="display: none;">
-					<table class="table table-striped table-bordered table-sm">
-						<thead>
-							<tr>
-								<th class="th-blue">OceanOPS metadata</th>
-								<th class="th-blue">OceanOPS database location</th>
-								<th class="th-blue">Format</th>
-								<th class="th-blue">Matching field/key</th>
-								<th class="th-blue">OceanOPS CSV default field</th>
-								<th class="th-blue">Known aliases</th>
-								<th class="th-blue">Comment</th>
-								<th class="th-blue">Metadata level</th>
-								<th class="th-pink">References</th>
-								<th class="th-green">Argo</th>
-								<th class="th-green">Glider</th>
-								<th class="th-green">OceanSITES</th>
-								<th class="th-green">SOT</th>
-							</tr>
-						</thead>
-						<tbody id="table6-body">
-						</tbody>
-					</table>					
+		<div class="container-fluid" id="tableInputs">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="table-responsive tableFixHead" id="table-1">
+						<table class="table table-striped table-bordered border-light table-sm">
+							<thead>
+								<tr>
+									<th class="table-primary">OceanOPS metadata</th>
+									<th class="table-primary">Format</th>
+									<th class="table-primary">Matching field/key</th>
+									<th class="table-primary">OceanOPS CSV default field</th>
+									<th class="table-primary">Known aliases</th>
+									<th class="table-primary">Comment</th>
+									<th class="table-primary">Metadata level</th>
+									<th class="table-danger">References</th>
+									<th class="table-success">Argo</th>
+									<th class="table-success">Glider</th>
+									<th class="table-success">OceanSITES</th>
+									<th class="table-success">SOT</th>
+								</tr>
+							</thead>
+							<tbody id="table1-body">
+							</tbody>
+						</table>	
+					</div>
+					
+					<div class="table-responsive tableFixHead" id="table-2" style="display: none;">
+						<table class="table table-striped table-bordered border-light table-sm">
+							<thead>
+								<tr>
+									<th class="table-primary">OceanOPS metadata</th>
+									<th class="table-primary">Format</th>
+									<th class="table-primary">Matching field/key</th>
+									<th class="table-primary">OceanOPS CSV default field</th>
+									<th class="table-primary">Known aliases</th>
+									<th class="table-primary">Comment</th>
+									<th class="table-primary">Metadata level</th>
+									<th class="table-danger">References</th>
+									<th class="table-success">Argo</th>
+									<th class="table-success">Glider</th>
+									<th class="table-success">OceanSITES</th>
+									<th class="table-success">SOT</th>
+								</tr>
+							</thead>
+							<tbody id="table2-body">
+							</tbody>
+							<caption>
+								(1) Agency roles should follow the same order as the Agencies listed in 'AGENCIES' field: the first role encountered will be attached to the first agency listed.<br/>
+								(2) Contributor roles should follow the same order as the contributors listed in 'CONTRIBUTORS' field: the first role encountered will be attached to the first contributor listed.
+							</caption>
+						</table>
+					</div>
+									
+					<div class="table-responsive tableFixHead" id="table-3" style="display: none;">
+						<table class="table table-striped table-bordered border-light table-sm">
+							<thead>
+								<tr>
+									<th class="table-primary">OceanOPS metadata</th>
+									<th class="table-primary">Format</th>
+									<th class="table-primary">Matching field/key</th>
+									<th class="table-primary">OceanOPS CSV default field</th>
+									<th class="table-primary">Known aliases</th>
+									<th class="table-primary">Comment</th>
+									<th class="table-primary">Metadata level</th>
+									<th class="table-danger">References</th>
+									<th class="table-success">Argo</th>
+									<th class="table-success">Glider</th>
+									<th class="table-success">OceanSITES</th>
+									<th class="table-success">SOT</th>
+								</tr>
+							</thead>
+							<tbody id="table3-body">
+							</tbody>
+						</table>	
+					</div>
+									
+					<div class="table-responsive tableFixHead" id="table-4" style="display: none;">
+						<table class="table table-striped table-bordered border-light table-sm">
+							<thead>
+								<tr>
+									<th class="table-primary">OceanOPS metadata</th>
+									<th class="table-primary">Format</th>
+									<th class="table-primary">Matching field/key</th>
+									<th class="table-primary">OceanOPS CSV default field</th>
+									<th class="table-primary">Known aliases</th>
+									<th class="table-primary">Comment</th>
+									<th class="table-primary">Metadata level</th>
+									<th class="table-danger">References</th>
+									<th class="table-success">Argo</th>
+									<th class="table-success">Glider</th>
+									<th class="table-success">OceanSITES</th>
+									<th class="table-success">SOT</th>
+								</tr>
+							</thead>
+							<tbody id="table4-body">
+							</tbody>
+						</table>	
+					</div>
+																	
+					<div class="table-responsive tableFixHead" id="table-5" style="display: none;">
+						<table class="table table-striped table-bordered border-light table-sm caption-top">
+							<caption>
+								In order to handle multiple sensor information, every information describing the sensors/variables are organised into sub-cell within a CSV value. 
+								All values must contain the same number of sub-cells and respecting the same order, including empty ones.
+								For example, if a record contains three sensors and serial numbers for the first and second, the CSV file should be filled as follows: 
+								SENSOR_MODELS = "SENSOR1,SENSOR2,SENSOR3", SENSOR_SERIALS = "SERIAL1,,SERIAL3".
+								<br/>
+								A sensor information will indicate that the record is able to measure all the default variables linked to that sensor model.
+								If the sensor is not measuring all the default variables or a per-variable customization is required, sub-cells must be repeated for each specified variables. 
+								The example above, with "SENSOR1" being customized for two variables, would become:
+								SENSOR_MODELS = "VARIABLE1:SENSOR1,VARIABLE2:SENSOR1,SENSOR2,SENSOR3", SENSOR_SERIALS = "SERIAL1,SERIAL1,,SERIAL3".
+							</caption>
+							<thead>
+								<tr>
+									<th class="table-primary">OceanOPS metadata</th>
+									<th class="table-primary">Format</th>
+									<th class="table-primary">Matching field/key</th>
+									<th class="table-primary">OceanOPS CSV default field</th>
+									<th class="table-primary">Known aliases</th>
+									<th class="table-primary">Comment</th>
+									<th class="table-primary">Metadata level</th>
+									<th class="table-danger">References</th>
+									<th class="table-success">Argo</th>
+									<th class="table-success">Glider</th>
+									<th class="table-success">OceanSITES</th>
+									<th class="table-success">SOT</th>
+								</tr>
+							</thead>
+							<tbody id="table5-body">
+							</tbody>
+						</table>				
+					</div>
+					
+					<div class="table-responsive tableFixHead" id="table-6" style="display: none;">
+						<table class="table table-striped table-bordered border-light table-sm">
+							<thead>
+								<tr>
+									<th class="table-primary">OceanOPS metadata</th>
+									<th class="table-primary">Format</th>
+									<th class="table-primary">Matching field/key</th>
+									<th class="table-primary">OceanOPS CSV default field</th>
+									<th class="table-primary">Known aliases</th>
+									<th class="table-primary">Comment</th>
+									<th class="table-primary">Metadata level</th>
+									<th class="table-danger">References</th>
+									<th class="table-success">Argo</th>
+									<th class="table-success">Glider</th>
+									<th class="table-success">OceanSITES</th>
+									<th class="table-success">SOT</th>
+								</tr>
+							</thead>
+							<tbody id="table6-body">
+							</tbody>
+						</table>					
+					</div>
 				</div>
 			</div>
-		</div>
-			
+		</div>	
 			
 		<div class="row">
 			<div class="col-sm-3" id="left-side-container">
@@ -1453,6 +1574,12 @@
 	function toggleTables(id){
 		for(i = 1; i< 7;i++){
 			if(i == id){
+				if(i == 4){
+					// DISPLAY 4. OPERATION TYPE SELECT BOX
+					$("#operation-type-select").css("display", "inline-block");
+				}else{
+					$("#operation-type-select").css("display", "none");
+				}
 				$("#table" + i + "-btn").addClass("activated");
 				$("#table-" + i).css("display", "block");
 				var tabIndex = i;
@@ -1461,11 +1588,19 @@
 						$.each( data, function( index ) {
 							var row = data[index];
 							
-							if(!selectedFilter || row["Level"] == selectedFilter){
+							// FILTER ROWS BY METADATA LEVEL AND OPERATION TYPE
+							var displayOperation = (!operationFilter || row["OceanOPS metadata"].toLowerCase().indexOf(operationFilter) != -1 || row["Database"].toLowerCase().indexOf(operationFilter) != -1);
+							if((row["OceanOPS metadata"] == "Area of operation" && operationFilter == "deployment") || (row["Database"].toLowerCase().indexOf("ending") != -1 && operationFilter == "retrieval")){
+								displayOperation = true;
+							}
+							if(operationFilter == "ship" && (row["OceanOPS metadata"] == "Deployment ship" || row["OceanOPS metadata"] == "Retrieval ship")){
+								displayOperation = false;
+							}
+							if((!selectedFilter || row["Level"] == selectedFilter) && (tabIndex != 4 || displayOperation)){
 								var rowAliases = "";
 								if(aliases[row["CSV field"]]){
-									aliases[row["CSV field"]].forEach(function(a, i){
-										if(i> 0){
+									aliases[row["CSV field"]].forEach(function(a, j){
+										if(j> 0){
 											rowAliases += "<br>";
 										}
 										rowAliases += a;
@@ -1473,23 +1608,26 @@
 								}
 								
 								t += "<tr>"; 
-								t += "<th class='td-blue'>"+ row["OceanOPS metadata"] +"</th>"; 
-								t += "<td class='td-blue'>"+ row["Database"] +"</td>"; 
-								t += "<td class='td-blue'>"+ row["Format"] +"</td>"; 
-								t += "<td class='td-blue'>"+ row["Match"] +"</td>"; 
-								t += "<td class='td-blue'>"+ row["CSV field"] +"</td>"; 
-								t += "<td class='td-blue'>"+ rowAliases + "</td>"; 
-								t += "<td class='td-blue'>"+ row["Comment"] +"</td>"; 
-								t += "<td class='td-blue'>"+ row["Level"] +"</td>"; 
-								t += "<td class='td-pink'>"+ row["References"] +"</td>"; 
-								t += "<td class='td-green'>"+ row["Argo"] +"</td>"; 
-								t += "<td class='td-green'>"+ row["Glider"] +"</td>"; 
-								t += "<td class='td-green'>"+ row["OceanSITES"] +"</td>"; 
-								t += "<td class='td-green'>"+ row["SOT"] +"</td>"; 
+								t += "<th class='table-primary'  data-bs-toggle='tooltip' data-bs-placement='right' title='OceanOPS database location: " + row["Database"] + "'>"+ row["OceanOPS metadata"] +"</th>"; 
+								t += "<td class='table-light'>"+ row["Format"] +"</td>"; 
+								t += "<td class='table-light'>"+ row["Match"] +"</td>"; 
+								t += "<td class='table-light'>"+ row["CSV field"] +"</td>"; 
+								t += "<td class='table-light'>"+ rowAliases + "</td>"; 
+								t += "<td class='table-light'>"+ row["Comment"] +"</td>"; 
+								t += "<td class='table-light'>"+ row["Level"] +"</td>"; 
+								t += "<td class='table-danger'>"+ row["References"] +"</td>"; 
+								t += "<td class='table-success'>"+ row["Argo"] +"</td>"; 
+								t += "<td class='table-success'>"+ row["Glider"] +"</td>"; 
+								t += "<td class='table-success'>"+ row["OceanSITES"] +"</td>"; 
+								t += "<td class='table-success'>"+ row["SOT"] +"</td>"; 
 								t += "</tr>"; 
 							}
 						});
 						$('#table'+ tabIndex +'-body').html(t);
+						var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+						var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+						  return new bootstrap.Tooltip(tooltipTriggerEl)
+						})
 					});
 			}else{
 				$("#table" + i + "-btn").removeClass("activated");
@@ -1503,6 +1641,7 @@
 	var aliases = {};
 	var selectedTab = 1;
 	var selectedFilter = "";
+	var operationFilter = "";
 	
 	$.getJSON("https://www.ocean-ops.org/static/board/data/aliases.json", function( data ) {
 		aliases = data;
@@ -1513,6 +1652,14 @@
 		selectedFilter = $('#level-select option:selected').text();
 		if(selectedFilter == "No filter" || selectedFilter == "--Filter by metadata level--"){
 			selectedFilter = "";
+		}
+		toggleTables(selectedTab);
+	});
+	
+	$('#operation-type-select').change(function() {
+		operationFilter = $('#operation-type-select option:selected').text().toLowerCase();
+		if(operationFilter == "no filter" || operationFilter == "--filter by operation type--"){
+			operationFilter = "";
 		}
 		toggleTables(selectedTab);
 	});

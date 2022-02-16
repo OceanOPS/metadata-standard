@@ -21,7 +21,7 @@
 	"CSV field": "See sensor model",
 	"Comment": "This entry is optional. If NOT specified (with the sensor model), all defautl variables will be added (and copied with all the information provided for this sensor model).",
 	"Level": "O",
-	"References": "P01 (BODC Parameter Usage Vocabulary), P02 (SeaDataNet Parameter Discovery Vocabulary)",
+	"References": "<a target='_blank' href='http://vocab.nerc.ac.uk/collection/P01/current/'>P01 (BODC Parameter Usage Vocabulary)</a>, <br><a target='_blank' href='http://vocab.nerc.ac.uk/collection/P02/current/'>P02 (SeaDataNet Parameter Discovery Vocabulary)</a>",
 	"Argo": "PARAMETER <a target='_blank' href='https://vocab.nerc.ac.uk/search_nvs/R03/'>R03</a>",
 	"Glider": "sdn_parameter_urn / ego_variable_name / PARAMETER",
 	"OceanSITES": "",
@@ -72,7 +72,7 @@
 {
 	"OceanOPS metadata": "Start date",
 	"Database": "PTF_VARIABLE.install_date",
-	"Format": "ISO 8601",
+	"Format": "<a target='_blank' href='https://en.wikipedia.org/wiki/ISO_8601'>ISO 8601</a>",
 	"Match": "n/a",
 	"CSV field": "VARIABLES START DATES",
 	"Comment": "",
@@ -86,7 +86,7 @@
 {
 	"OceanOPS metadata": "End date",
 	"Database": "PTF_VARIABLE.end_date",
-	"Format": "ISO 8601",
+	"Format": "<a target='_blank' href='https://en.wikipedia.org/wiki/ISO_8601'>ISO 8601</a>",
 	"Match": "n/a",
 	"CSV field": "VARIABLES END DATES",
 	"Comment": "",
@@ -100,7 +100,7 @@
 {
 	"OceanOPS metadata": "Height/Depth",
 	"Database": "PTF_VARIABLE.height",
-	"Format": "Decimal NUMBER(6,2) + above the sea, - under the sea",
+	"Format": "Decimal NUMBER(6,2) <br> + above the sea, <br> - under the sea",
 	"Match": "n/a",
 	"CSV field": "VARIABLES HEIGHTS",
 	"Comment": "Height or depth of the installation of the sensor from sea level. Positive value for height, Negative value for depth",
@@ -114,7 +114,7 @@
 {
 	"OceanOPS metadata": "Sensor calibration date",
 	"Database": "PTF_VARIABLE.calib_date",
-	"Format": "ISO 8601",
+	"Format": "<a target='_blank' href='https://en.wikipedia.org/wiki/ISO_8601'>ISO 8601</a>",
 	"Match": "n/a",
 	"CSV field": "VARIABLES CALIBRATION DATES",
 	"Comment": "The last calibration date of the sensor",
@@ -170,10 +170,10 @@
 {
 	"OceanOPS metadata": "Sensor side indicator",
 	"Database": "PTF_VARIABLE.side_indicator",
-	"Format": "Values ('starboard','board')",
+	"Format": "Values ('starboard','port')",
 	"Match": "n/a",
 	"CSV field": "VARIABLES SIDE INDICATOR",
-	"Comment": "Position of the sensor on the platform / ship : Port / Starboard",
+	"Comment": "Position of the sensor on the platform / ship: Port / Starboard",
 	"Level": "O",
 	"References": "",
 	"Argo": "",
@@ -226,7 +226,7 @@
 {
 	"OceanOPS metadata": "Next calibration due date",
 	"Database": "PTF_VARIABLE.next_calib_date",
-	"Format": "ISO 8601",
+	"Format": "<a target='_blank' href='https://en.wikipedia.org/wiki/ISO_8601'>ISO 8601</a>",
 	"Match": "n/a",
 	"CSV field": "VARIABLES NEXT CALIBRATION DUE DATES",
 	"Comment": "",
@@ -239,7 +239,7 @@
 },
 {
 	"OceanOPS metadata": "Instrument observing status",
-	"Database": "PTF_VARIABLE.sensor_status_id",
+	"Database": "SENSOR_STATUS, PTF_VARIABLE.sensor_status_id",
 	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/1/help/?param=sensorstatus'>Reference table</a>",
 	"Match": "REF",
 	"CSV field": "VARIABLES OPERATING STATUS",
@@ -295,7 +295,7 @@
 },
 {
 	"OceanOPS metadata": "Data processing algorithms",
-	"Database": "PTF_VARIABLE.data_processing_method_id",
+	"Database": "DATA_PROCESSING_METHOD, PTF_VARIABLE.data_processing_method_id",
 	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/1/help/?param=dataprocessingmethod'>Reference table</a>",
 	"Match": "REF",
 	"CSV field": "VARIABLES DATA PROCESSING METHODS",
@@ -309,8 +309,8 @@
 },
 {
 	"OceanOPS metadata": "Instrument control schedule",
-	"Database": "PTF_VARIABLE.service_schedule",
-	"Format": "",
+	"Database": "SCHEDULE, PTF_VARIABLE.service_schedule_id",
+	"Format": "Reference table",
 	"Match": "n/a",
 	"CSV field": "VARIABLES SERVICE SCHEDULES",
 	"Comment": "",
