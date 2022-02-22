@@ -1331,9 +1331,106 @@
 								</ul>
 						</ol>
 					
+						<h4>Request identifiers through the API </h4>
+						<p>
+							Batches of identifiers can be requested through the underlying REST API, documented here: <a target="_blank" href = "https://www.ocean-ops.org/api/swagger/?url=https://www.ocean-ops.org/apiid/1/oceanops-apiid.yaml">https://www.ocean-ops.org/api/swagger/?url=https://www.ocean-ops.org/apiid/1/oceanops-apiid.yaml</a>.
+							<br>
+							This API requires a couple of id-token to authenticate the user while using it. These identifying information can be obtained through <a target="_blank" href="https://www.ocean-ops.org/board">OceanOPS web dashboard</a>, 
+							detailed in <a href="#obtainedanAPItoken">Obtained an API token</a>.
+						</p>				
 					
-					
-					
+						<h4 id="obtainedanAPItoken">Obtained an API token </h4>		
+						<p>
+							It is possible to request an API token once logged in, under the API access window in the user menu:</p>
+							<a class='linkMinifiedImage' href="#" data-bs-toggle="modal" data-bs-target="#modalimg-getAPIToken1">
+								<p><img src="img/getAPIToken1.png"/></p>
+							</a>											
+							<div class="modal" id="modalimg-getAPIToken1" tabindex="-1">
+							  <div class="modal-dialog modal-xl">
+								<div class="modal-content">
+								  <div class="modal-header">
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								  </div>
+								  <div class="modal-body">
+									<img src="img/getAPIToken1.png" class="img-fluid">
+								  </div>
+								  <div class="modal-footer"></div>
+								</div>
+							  </div>
+							</div>	
+							<p>A new window will appear, allowing to request a token: </p>
+							<a class='linkMinifiedImage' href="#" data-bs-toggle="modal" data-bs-target="#modalimg-getAPIToken2">
+								<p><img src="img/getAPIToken2.png"/></p>
+							</a>											
+							<div class="modal" id="modalimg-getAPIToken2" tabindex="-1">
+							  <div class="modal-dialog modal-xl">
+								<div class="modal-content">
+								  <div class="modal-header">
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								  </div>
+								  <div class="modal-body">
+									<img src="img/getAPIToken2.png" class="img-fluid">
+								  </div>
+								  <div class="modal-footer"></div>
+								</div>
+							  </div>
+							</div>	
+							<p>When clicking ‘Request token’, the interface will display the request token. Attention: the newly created token will be displayed only once for security reasons; be sure to securely save it for future usage.
+A token has an end validity date, defaulting to one year. If you need to extend the validity of a token, please request a new one (requires updating scripts/codes where it is used) or reach out to OceanOPS support.
+Only one token per user can be activated at a time. </p>
+							<a class='linkMinifiedImage' href="#" data-bs-toggle="modal" data-bs-target="#modalimg-getAPIToken3">
+								<p><img src="img/getAPIToken3.png"/></p>
+							</a>											
+							<div class="modal" id="modalimg-getAPIToken3" tabindex="-1">
+							  <div class="modal-dialog modal-xl">
+								<div class="modal-content">
+								  <div class="modal-header">
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								  </div>
+								  <div class="modal-body">
+									<img src="img/getAPIToken3.png" class="img-fluid">
+								  </div>
+								  <div class="modal-footer"></div>
+								</div>
+							  </div>
+							</div>		
+							<p>This token has obviously been disabled since!
+You can view your active token IDs, validity and usage information, usage instruction by visiting this API access window later: </p>
+							<a class='linkMinifiedImage' href="#" data-bs-toggle="modal" data-bs-target="#modalimg-getAPIToken4">
+								<p><img src="img/getAPIToken4.png"/></p>
+							</a>											
+							<div class="modal" id="modalimg-getAPIToken4" tabindex="-1">
+							  <div class="modal-dialog modal-xl">
+								<div class="modal-content">
+								  <div class="modal-header">
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								  </div>
+								  <div class="modal-body">
+									<img src="img/getAPIToken4.png" class="img-fluid">
+								  </div>
+								  <div class="modal-footer"></div>
+								</div>
+							  </div>
+							</div>
+							<p>This window also enables you to disable a token, allowing you request a new one if needed (expired or forgotten for example). </p>
+							<a class='linkMinifiedImage' href="#" data-bs-toggle="modal" data-bs-target="#modalimg-getAPIToken5">
+								<p><img src="img/getAPIToken5.png"/></p>
+							</a>											
+							<div class="modal" id="modalimg-getAPIToken5" tabindex="-1">
+							  <div class="modal-dialog modal-xl">
+								<div class="modal-content">
+								  <div class="modal-header">
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								  </div>
+								  <div class="modal-body">
+									<img src="img/getAPIToken5.png" class="img-fluid">
+								  </div>
+								  <div class="modal-footer"></div>
+								</div>
+							  </div>
+							</div>
+
+						</p>			
 					
 					
 				</div>
