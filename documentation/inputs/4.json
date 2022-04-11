@@ -25,7 +25,7 @@
 	"Argo": "launch_date",
 	"Glider": "DEPLOYMENT_START_DATE",
 	"OceanSITES": "time_coverage_start",
-	"SOT": "start date"
+	"SOT": "Start date"
 },
 {
 	"OceanOPS metadata": "Deployment lat",
@@ -67,7 +67,7 @@
 	"Argo": "deployment_platform",
 	"Glider": "DEPLOYMENT_PLATFORM",
 	"OceanSITES": "",
-	"SOT": "ship"
+	"SOT": "Ship name"
 },
 {
 	"OceanOPS metadata": "Deployment cruise",
@@ -123,7 +123,7 @@
 	"Argo": "",
 	"Glider": "Not available - Not relevent",
 	"OceanSITES": "",
-	"SOT": ""
+	"SOT": "Observing height"
 },
 {
 	"OceanOPS metadata": "Area of operation",
@@ -137,7 +137,7 @@
 	"Argo": "",
 	"Glider": "",
 	"OceanSITES": "",
-	"SOT": "area of operation"
+	"SOT": "Area of operation"
 },
 {
 	"OceanOPS metadata": "Retrieval status",
@@ -179,7 +179,7 @@
 	"Argo": "end_mission_date",
 	"Glider": "DEPLOYMENT_END_DATE",
 	"OceanSITES": "time_coverage_end",
-	"SOT": ""
+	"SOT": "Stop date, End date"
 },
 {
 	"OceanOPS metadata": "Retrieval end date",
@@ -207,7 +207,7 @@
 	"Argo": "",
 	"Glider": "DEPLOYMENT_END_LATITUDE",
 	"OceanSITES": "",
-	"SOT": ""
+	"SOT": "N/A"
 },
 {
 	"OceanOPS metadata": "Recovery end longitude",
@@ -221,7 +221,7 @@
 	"Argo": "",
 	"Glider": "DEPLOYMENT_END_LONGITUDE",
 	"OceanSITES": "",
-	"SOT": ""
+	"SOT": "N/A"
 },
 {
 	"OceanOPS metadata": "De-installation date",
@@ -235,7 +235,7 @@
 	"Argo": "",
 	"Glider": "N/A",
 	"OceanSITES": "",
-	"SOT": "stop date"
+	"SOT": ""
 },
 {
 	"OceanOPS metadata": "Ending cause",
@@ -263,7 +263,7 @@
 	"Argo": "",
 	"Glider": "Not available",
 	"OceanSITES": "",
-	"SOT": ""
+	"SOT": "N/A"
 },
 {
 	"OceanOPS metadata": "Retrieval country",
@@ -361,7 +361,7 @@
 	"Argo": "",
 	"Glider": "",
 	"OceanSITES": "",
-	"SOT": ""
+	"SOT": "Ship ICES code"
 },
 {
 	"OceanOPS metadata": "Ship name",
@@ -375,7 +375,7 @@
 	"Argo": "",
 	"Glider": "",
 	"OceanSITES": "",
-	"SOT": ""
+	"SOT": "Ship name"
 },
 {
 	"OceanOPS metadata": "Ship country",
@@ -389,7 +389,7 @@
 	"Argo": "",
 	"Glider": "",
 	"OceanSITES": "",
-	"SOT": ""
+	"SOT": "Ship country of registration"
 },
 {
 	"OceanOPS metadata": "Ship IMO number",
@@ -403,7 +403,7 @@
 	"Argo": "",
 	"Glider": "",
 	"OceanSITES": "",
-	"SOT": ""
+	"SOT": "Ship IMO"
 },
 {
 	"OceanOPS metadata": "Ship call sign",
@@ -417,7 +417,21 @@
 	"Argo": "",
 	"Glider": "",
 	"OceanSITES": "",
-	"SOT": ""
+	"SOT": "Ship call sign"
+},
+{
+	"OceanOPS metadata": "Ship MMSI",
+	"Database": "SHIP.mmsi",
+	"Format": "Control vocab",
+	"Match": "n/a",
+	"CSV field": "SHIP MMSI",
+	"Comment": "",
+	"Level": "O",
+	"References": "",
+	"Argo": "",
+	"Glider": "",
+	"OceanSITES": "",
+	"SOT": "Ship MMSI"
 },
 {
 	"OceanOPS metadata": "Ship type",
@@ -431,7 +445,7 @@
 	"Argo": "",
 	"Glider": "",
 	"OceanSITES": "",
-	"SOT": ""
+	"SOT": "Ship vessel type"
 },
 {
 	"OceanOPS metadata": "Hide ship metadata option",
@@ -445,7 +459,7 @@
 	"Argo": "",
 	"Glider": "",
 	"OceanSITES": "",
-	"SOT": ""
+	"SOT": "Ship hide metadata"
 },
 {
 	"OceanOPS metadata": "Ship vessel length",
@@ -459,7 +473,7 @@
 	"Argo": "",
 	"Glider": "",
 	"OceanSITES": "",
-	"SOT": ""
+	"SOT": "Ship vessel length"
 },
 {
 	"OceanOPS metadata": "Ship vessel breadth",
@@ -473,7 +487,7 @@
 	"Argo": "",
 	"Glider": "",
 	"OceanSITES": "",
-	"SOT": ""
+	"SOT": "Ship breadth"
 },
 {
 	"OceanOPS metadata": "Ship freeboard",
@@ -487,7 +501,7 @@
 	"Argo": "",
 	"Glider": "",
 	"OceanSITES": "",
-	"SOT": ""
+	"SOT": "Ship freeboard"
 },
 {
 	"OceanOPS metadata": "Ship draft",
@@ -501,7 +515,7 @@
 	"Argo": "",
 	"Glider": "",
 	"OceanSITES": "",
-	"SOT": ""
+	"SOT": "Ship draft"
 },
 {
 	"OceanOPS metadata": "Ship cargo height",
@@ -515,7 +529,7 @@
 	"Argo": "",
 	"Glider": "",
 	"OceanSITES": "",
-	"SOT": ""
+	"SOT": "Ship cargo height"
 },
 {
 	"OceanOPS metadata": "Ship distance bridge bow",
@@ -529,7 +543,7 @@
 	"Argo": "",
 	"Glider": "",
 	"OceanSITES": "",
-	"SOT": ""
+	"SOT": "Ship distance bridge bow"
 },
 {
 	"OceanOPS metadata": "Ship max speed",
@@ -543,7 +557,7 @@
 	"Argo": "",
 	"Glider": "",
 	"OceanSITES": "",
-	"SOT": ""
+	"SOT": "Ship max speed"
 },
 {
 	"OceanOPS metadata": "Shipping company",
@@ -557,7 +571,21 @@
 	"Argo": "",
 	"Glider": "",
 	"OceanSITES": "",
-	"SOT": ""
+	"SOT": "Shipping company"
+},
+{
+	"OceanOPS metadata": "Ship comment",
+	"Database": "SHIP.description",
+	"Format": "Free text",
+	"Match": "n/a",
+	"CSV field": "SHIP COMMENTS",
+	"Comment": "",
+	"Level": "O",
+	"References": "",
+	"Argo": "",
+	"Glider": "",
+	"OceanSITES": "",
+	"SOT": "Ship comment"
 },
 {
 	"OceanOPS metadata": "Ship contact shore name",
@@ -571,7 +599,7 @@
 	"Argo": "",
 	"Glider": "",
 	"OceanSITES": "",
-	"SOT": ""
+	"SOT": "Ship contact shore name"
 },
 {
 	"OceanOPS metadata": "Ship contact shore email",
@@ -585,10 +613,10 @@
 	"Argo": "",
 	"Glider": "",
 	"OceanSITES": "",
-	"SOT": ""
+	"SOT": "Ship contact shore email"
 },
 {
-	"OceanOPS metadata": "Ship contact Sea email",
+	"OceanOPS metadata": "Ship contact sea email",
 	"Database": "SHIP.contact_sea_email",
 	"Format": "Email formatted text",
 	"Match": "n/a",
@@ -599,7 +627,7 @@
 	"Argo": "",
 	"Glider": "",
 	"OceanSITES": "",
-	"SOT": ""
+	"SOT": "Ship contact sea email"
 }
 ]
 

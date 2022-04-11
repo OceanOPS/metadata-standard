@@ -11,7 +11,7 @@
 	"Argo": "",
 	"Glider": "",
 	"OceanSITES": "Random or WIGOS reference",
-	"SOT": ""
+	"SOT": "SOT-ID"
 },
 {
 	"OceanOPS metadata": "Platform name",
@@ -67,7 +67,7 @@
 	"Argo": "",
 	"Glider": "",
 	"OceanSITES": "",
-	"SOT": "Comments"
+	"SOT": "Station comment"
 },
 {
 	"OceanOPS metadata": "Platform model",
@@ -81,7 +81,7 @@
 	"Argo": "platform_type <a target = '_blank' href = 'https://vocab.nerc.ac.uk/search_nvs/R23/'>R23</a>",
 	"Glider": "PLATFORM_TYPE",
 	"OceanSITES": "platform_type",
-	"SOT": "Observing system main device"
+	"SOT": "Model main device (Observing System)"
 },
 {
 	"OceanOPS metadata": "Networks",
@@ -95,7 +95,7 @@
 	"Argo": "project_name",
 	"Glider": "project_name",
 	"OceanSITES": "network",
-	"SOT": "Mandatory. Additional programme affiliation, Class-Category"
+	"SOT": "Mandatory. Networks (Additional programs), class category"
 },
 {
 	"OceanOPS metadata": "Site name",

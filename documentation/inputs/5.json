@@ -11,7 +11,7 @@
 	"Argo": "Mandatory. SENSOR_MODEL <a target='_blank' href='https://vocab.nerc.ac.uk/search_nvs/R27/'>R27</a>",
 	"Glider": "SENSOR_MODEL",
 	"OceanSITES": "",
-	"SOT": "Mandatory. make_model"
+	"SOT": "Mandatory. Make_model"
 },
 {
 	"OceanOPS metadata": "Variable / Variable",
@@ -25,7 +25,7 @@
 	"Argo": "PARAMETER <a target='_blank' href='https://vocab.nerc.ac.uk/search_nvs/R03/'>R03</a>",
 	"Glider": "sdn_parameter_urn / ego_variable_name / PARAMETER",
 	"OceanSITES": "",
-	"SOT": "parameter"
+	"SOT": "Parameter"
 },
 {
 	"OceanOPS metadata": "Measurement unit",
@@ -39,7 +39,63 @@
 	"Argo": "",
 	"Glider": "PARAMETER_UNITS",
 	"OceanSITES": "",
-	"SOT": "Measurement unit"
+	"SOT": "Sensor unit"
+},
+{
+	"OceanOPS metadata": "Sensor range",
+	"Database": "PTF_VARIABLE.range",
+	"Format": "Free text",
+	"Match": "n/a",
+	"CSV field": "VARIABLES INSTRUMENT RANGE",
+	"Comment": "In the sensor model definition, a range can be registered. In addition, a sensor range can also be defined for the platform. ",
+	"Level": "O",
+	"References": "",
+	"Argo": "",
+	"Glider": "",
+	"OceanSITES": "",
+	"SOT": "Sensor range"
+},
+{
+	"OceanOPS metadata": "Sensor precision",
+	"Database": "PTF_VARIABLE.precision",
+	"Format": "Free text",
+	"Match": "n/a",
+	"CSV field": "VARIABLES INSTRUMENT PRECISION",
+	"Comment": "In the sensor model definition, a precision can be registered. In addition, a sensor precision can also be defined for the platform. ",
+	"Level": "O",
+	"References": "",
+	"Argo": "",
+	"Glider": "",
+	"OceanSITES": "",
+	"SOT": "Sensor precision"
+},
+{
+	"OceanOPS metadata": "Sensor resolution",
+	"Database": "PTF_VARIABLE.resolution",
+	"Format": "Free text",
+	"Match": "n/a",
+	"CSV field": "VARIABLES INSTRUMENT RESOLUTION",
+	"Comment": "In the sensor model definition, a resolution can be registered. In addition, a sensor resolution can also be defined for the platform. ",
+	"Level": "O",
+	"References": "",
+	"Argo": "",
+	"Glider": "",
+	"OceanSITES": "",
+	"SOT": "Sensor resolution"
+},
+{
+	"OceanOPS metadata": "Sensor accuracy",
+	"Database": "PTF_VARIABLE.accuracy",
+	"Format": "Free text",
+	"Match": "n/a",
+	"CSV field": "VARIABLES INSTRUMENT ACCURACY",
+	"Comment": "In the sensor model definition, an accuracy can be registered. In addition, a sensor accuracy can also be defined for the platform. ",
+	"Level": "O",
+	"References": "",
+	"Argo": "",
+	"Glider": "",
+	"OceanSITES": "",
+	"SOT": "Sensor accuracy"
 },
 {
 	"OceanOPS metadata": "Data link URL",
@@ -67,7 +123,7 @@
 	"Argo": "SENSOR_SERIAL_NO",
 	"Glider": "SENSOR_SERIAL_NO",
 	"OceanSITES": "",
-	"SOT": "serial"
+	"SOT": "Sensor serials"
 },
 {
 	"OceanOPS metadata": "Start date",
@@ -81,7 +137,7 @@
 	"Argo": "",
 	"Glider": "Not available - not relevent",
 	"OceanSITES": "",
-	"SOT": "Mandatory. start date"
+	"SOT": "Mandatory. Sensor start dates"
 },
 {
 	"OceanOPS metadata": "End date",
@@ -95,7 +151,7 @@
 	"Argo": "",
 	"Glider": "Not available - not relevent",
 	"OceanSITES": "",
-	"SOT": "stop date"
+	"SOT": "Sensor stop dates"
 },
 {
 	"OceanOPS metadata": "Height/Depth",
@@ -109,7 +165,7 @@
 	"Argo": "",
 	"Glider": "Not available - not relevent",
 	"OceanSITES": "",
-	"SOT": "vertical distance of sensor from SLL or waterline"
+	"SOT": "Sensor heights (Vertical distance of sensor from SLL or waterline)"
 },
 {
 	"OceanOPS metadata": "Sensor calibration date",
@@ -123,7 +179,7 @@
 	"Argo": "",
 	"Glider": "DERIVATION_DATE",
 	"OceanSITES": "",
-	"SOT": "date of last calibration"
+	"SOT": "Sensor calibration date"
 },
 {
 	"OceanOPS metadata": "Sensor provider",
@@ -151,7 +207,7 @@
 	"Argo": "",
 	"Glider": "Not available - not relevent",
 	"OceanSITES": "",
-	"SOT": "Highly desirable. configuration - location"
+	"SOT": "Highly desirable. Sensor location (Configuration)"
 },
 {
 	"OceanOPS metadata": "Sensor exposure",
@@ -165,7 +221,7 @@
 	"Argo": "",
 	"Glider": "Not available - not relevent",
 	"OceanSITES": "",
-	"SOT": "Highly desirable. configuration"
+	"SOT": "Highly desirable. Sensor exposure (Configuration)"
 },
 {
 	"OceanOPS metadata": "Sensor side indicator",
@@ -179,7 +235,7 @@
 	"Argo": "",
 	"Glider": "Not available - not relevent",
 	"OceanSITES": "",
-	"SOT": "Highly desirable. configuration - side indicator"
+	"SOT": "Highly desirable. Sensor side indicator (Configuration)"
 },
 {
 	"OceanOPS metadata": "Height secondary reference level (m)",
@@ -193,7 +249,7 @@
 	"Argo": "",
 	"Glider": "Not available - not relevent",
 	"OceanSITES": "",
-	"SOT": "height of sensor above deck"
+	"SOT": "Sensor height deck (Height of sensor above deck)"
 },
 {
 	"OceanOPS metadata": "Distance Y axis (m)",
@@ -207,7 +263,7 @@
 	"Argo": "",
 	"Glider": "Not available - not relevent",
 	"OceanSITES": "",
-	"SOT": "distance from bow"
+	"SOT": "Sensor distance bow"
 },
 {
 	"OceanOPS metadata": "Distance X axis (m)",
@@ -221,7 +277,7 @@
 	"Argo": "",
 	"Glider": "Not available - not relevent",
 	"OceanSITES": "",
-	"SOT": "distance from center line"
+	"SOT": "Sensor distance center (Distance from center line)"
 },
 {
 	"OceanOPS metadata": "Next calibration due date",
@@ -235,7 +291,7 @@
 	"Argo": "",
 	"Glider": "Not available - not relevent",
 	"OceanSITES": "",
-	"SOT": "Next calibration due date"
+	"SOT": "Sensor next calibration due dates"
 },
 {
 	"OceanOPS metadata": "Instrument observing status",
@@ -249,7 +305,7 @@
 	"Argo": "",
 	"Glider": "Not available - not relevent",
 	"OceanSITES": "",
-	"SOT": "Instrument observing status"
+	"SOT": "Sensor operating status (Instrument observing status)"
 },
 {
 	"OceanOPS metadata": "Instrument specs",
@@ -268,7 +324,7 @@
 {
 	"OceanOPS metadata": "Sensor sampling period",
 	"Database": "PTF_VARIABLE.sampling_rate",
-	"Format": "",
+	"Format": "<a target='_blank' href='https://en.wikipedia.org/wiki/ISO_8601'>ISO 8601</a>",
 	"Match": "n/a",
 	"CSV field": "VARIABLES SAMPLING PERIODS",
 	"Comment": "",
@@ -277,12 +333,12 @@
 	"Argo": "",
 	"Glider": "Not available - not relevent",
 	"OceanSITES": "",
-	"SOT": "Highly desirable. sensor sampling period"
+	"SOT": "Highly desirable. Sensor sampling periods"
 },
 {
 	"OceanOPS metadata": "Total sampling period",
 	"Database": "PTF_VARIABLE.sampling_rate_total",
-	"Format": "",
+	"Format": "<a target='_blank' href='https://en.wikipedia.org/wiki/ISO_8601'>ISO 8601</a>",
 	"Match": "n/a",
 	"CSV field": "VARIABLES TOTAL SAMPLING PERIODS",
 	"Comment": "",
@@ -291,7 +347,7 @@
 	"Argo": "",
 	"Glider": "Not available - not relevent",
 	"OceanSITES": "",
-	"SOT": "Highly desirable. total sampling period"
+	"SOT": "Highly desirable. Sensor total sampling periods"
 },
 {
 	"OceanOPS metadata": "Data processing algorithms",
@@ -305,11 +361,11 @@
 	"Argo": "",
 	"Glider": "Not available - not relevent",
 	"OceanSITES": "",
-	"SOT": "Highly desirable. Data processing algorithms"
+	"SOT": "Highly desirable. Sensor data processing methods"
 },
 {
 	"OceanOPS metadata": "Instrument control schedule",
-	"Database": "SCHEDULE, PTF_VARIABLE.service_schedule_id",
+	"Database": "TIME_PERIOD, PTF_VARIABLE.service_schedule_id",
 	"Format": "Reference table",
 	"Match": "n/a",
 	"CSV field": "VARIABLES SERVICE SCHEDULES",
@@ -319,6 +375,20 @@
 	"Argo": "",
 	"Glider": "Not available - not relevent",
 	"OceanSITES": "",
-	"SOT": "Instrument control schedule"
+	"SOT": "Sensor service schedules"
+}, 
+{
+	"OceanOPS metadata": "Sensor comment",
+	"Database": "PTF_VARIABLE.comments",
+	"Format": "Free text",
+	"Match": "",
+	"CSV field": "VARIABLES SENSOR COMMENTS",
+	"Comment": "",
+	"Level": "O",
+	"References": "",
+	"Argo": "",
+	"Glider": "",
+	"OceanSITES": "",
+	"SOT": "Sensor comment"
 }
 ]

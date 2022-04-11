@@ -11,7 +11,7 @@
 	"Argo": "Mandatory. trans_system <a target='_blank' href='https://vocab.nerc.ac.uk/search_nvs/R10/'>R10</a>",
 	"Glider": "Highly desirable. TRANS_SYSTEM",
 	"OceanSITES": "",
-	"SOT": "Highly desirable. Telecom service"
+	"SOT": "Highly desirable. Telecom type"
 },
 {
 	"OceanOPS metadata": "Telecom number",
@@ -53,7 +53,7 @@
 	"Argo": "",
 	"Glider": "N/A",
 	"OceanSITES": "",
-	"SOT": "Mandatory. Data communication method"
+	"SOT": "Mandatory. Telecom service (Data communication method)"
 },
 {
 	"OceanOPS metadata": "Telecom format",
@@ -277,7 +277,7 @@
 	"Argo": "",
 	"Glider": "Not available",
 	"OceanSITES": "",
-	"SOT": "Target inspection interval (days)"
+	"SOT": "Target inspection interval"
 },
 {
 	"OceanOPS metadata": "Schedule of observation",
@@ -487,7 +487,7 @@
 	"Argo": "",
 	"Glider": "LANDSTATION_SOFTWARE_VERSION",
 	"OceanSITES": "",
-	"SOT": ""
+	"SOT": "Version number main device (Datalogger version)"
 },
 {
 	"OceanOPS metadata": "Software format",
@@ -530,6 +530,48 @@
 	"Glider": "Not available",
 	"OceanSITES": "",
 	"SOT": ""
+},
+{
+	"OceanOPS metadata": "Model ancillary device",
+	"Database": "PTF_ANCILLARY_DEVICE_NAME, PTF_ANCILLARY_DEVICE_VERSION.ptf_ancillary_device_name_id (PTF_ANCILLARY_DEVICE.ptf_id, PTF_ANCILLARY_DEVICE.version_id)",
+	"Format": "Reference table",
+	"Match": "n/a",
+	"CSV field": "ANCILLARY DEVICE MODEL",
+	"Comment": "",
+	"Level": "O",
+	"References": "",
+	"Argo": "N/A",
+	"Glider": "",
+	"OceanSITES": "",
+	"SOT": "Model ancillary device (Entry display software)"
+},
+{
+	"OceanOPS metadata": "Serial number ancillary device",
+	"Database": "PTF_ANCILLARY_DEVICE.serial_ref (PTF_ANCILLARY_DEVICE.ptf_id)",
+	"Format": "Free text",
+	"Match": "n/a",
+	"CSV field": "ANCILLARY DEVICE SERIAL NUMBER",
+	"Comment": "",
+	"Level": "O",
+	"References": "",
+	"Argo": "N/A",
+	"Glider": "",
+	"OceanSITES": "",
+	"SOT": "Serial number ancillary device"
+},
+{
+	"OceanOPS metadata": "Version number ancillary device",
+	"Database": "PTF_ANCILLARY_DEVICE_VERSION.version (PTF_ANCILLARY_DEVICE.ptf_id, PTF_ANCILLARY_DEVICE.version_id)",
+	"Format": "Control vocab",
+	"Match": "n/a",
+	"CSV field": "ANCILLARY DEVICE VERSION NUMBER",
+	"Comment": "",
+	"Level": "O",
+	"References": "",
+	"Argo": "N/A",
+	"Glider": "",
+	"OceanSITES": "",
+	"SOT": "Version number ancillary device (Entry dipslay software version)"
 }
 ]
 

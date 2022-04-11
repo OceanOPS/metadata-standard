@@ -11,7 +11,7 @@
 	"Argo": "platform_number",
 	"Glider": "wmo_platform_code",
 	"OceanSITES": "wmo_platform_code",
-	"SOT": "GTS-ID"
+	"SOT": "WMO - GTS-ID"
 },
 {
 	"OceanOPS metadata": "Platform serial number",
@@ -25,7 +25,7 @@
 	"Argo": "Highly desirable. float_serial_no",
 	"Glider": "Mandatory. GLIDER_SERIAL_NO",
 	"OceanSITES": "",
-	"SOT": "main device serial number"
+	"SOT": "Serial number main device"
 },
 {
 	"OceanOPS metadata": "Internal ID",
@@ -39,7 +39,7 @@
 	"Argo": "",
 	"Glider": "deployment_code",
 	"OceanSITES": "id",
-	"SOT": ""
+	"SOT": "Internal ID"
 }
 ]
 
