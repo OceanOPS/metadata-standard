@@ -281,8 +281,8 @@
 },
 {
 	"OceanOPS metadata": "Schedule of observation",
-	"Database": "TIME_PERIOD, PTF.PTF_CONFIG.CONFIG.obs_schedule_id",
-	"Format": "Reference table",
+	"Database": "PTF.PTF_CONFIG.CONFIG.obs_schedule",
+	"Format": "<a target='_blank' href='https://en.wikipedia.org/wiki/ISO_8601'>ISO 8601</a>",
 	"Match": "n/a",
 	"CSV field": "SCHEDULE OF OBSERVATION",
 	"Comment": "",
