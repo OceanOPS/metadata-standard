@@ -61,7 +61,7 @@
 	"Format": "<a target='_blank' href='https://www.ocean-ops.org/api/1/help/?param=contactrole'>Reference table</a>",
 	"Match": "NAME_SHORT (2)",
 	"CSV field": "CONTRIBUTOR ROLES",
-	"Comment": "By defaut, roles attributed to the contact program.",
+	"Comment": "By default, roles attributed to the contact program.",
 	"Level": "O",
 	"References": "",
 	"Argo": "",

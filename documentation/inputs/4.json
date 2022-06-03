@@ -72,7 +72,7 @@
 {
 	"OceanOPS metadata": "Deployment cruise",
 	"Database": "CRUISE, PTF.PTF_DEPLOYMENT.cruise_id",
-	"Format": "<a target='_blank' href='https://www.ocean-ops.org/arcgisserver/rest/services/Commons/CRUISE_LINE/MapServer/0'>Reference table</a>",
+	"Format": "<a target='_blank' href='https://www.ocean-ops.org/arcgis/rest/services/Commons/Cruises/MapServer/0'>Reference table</a>",
 	"Match": "REF",
 	"CSV field": "CRUISE",
 	"Comment": "Cruise during which the platform was deployed. The cruise is identified by the expocode.",
@@ -128,7 +128,7 @@
 {
 	"OceanOPS metadata": "Area of operation",
 	"Database": "LINE, PTF.LINE_PTF.line_id",
-	"Format": "<a target='_blank' href='https://www.ocean-ops.org/arcgisserver/rest/services/Commons/DesignLines/MapServer/0'>Reference table</a>",
+	"Format": "<a target='_blank' href='https://www.ocean-ops.org/arcgis/rest/services/OceanOPS/DesignLines/MapServer/0'>Reference table</a>",
 	"Match": "NAME",
 	"CSV field": "AREA OF OPERATION",
 	"Comment": "List of GO-SHIP or SOOP XBT lines sampled by the platform operations",
@@ -282,7 +282,7 @@
 {
 	"OceanOPS metadata": "Retrieval cruise",
 	"Database": "CRUISE, PTF.RETRIEVAL.cruise_id",
-	"Format": "<a target='_blank' href='https://www.ocean-ops.org/arcgisserver/rest/services/Commons/CRUISE_LINE/MapServer/0'>Reference table</a>",
+	"Format": "<a target='_blank' href='https://www.ocean-ops.org/arcgis/rest/services/Commons/Cruises/MapServer/0'>Reference table</a>",
 	"Match": "",
 	"CSV field": "RETRIEVAL CRUISE",
 	"Comment": "Cruise during which the platform was recovered. The cruise is identified by the expocode",
