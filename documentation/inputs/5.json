@@ -98,6 +98,20 @@
 	"SOT": "Sensor accuracy"
 },
 {
+	"OceanOPS metadata": "Sensor uncertainty",
+	"Database": "PTF_VARIABLE.uncertainty",
+	"Format": "Free text",
+	"Match": "n/a",
+	"CSV field": "VARIABLES INSTRUMENT UNCERTAINTY",
+	"Comment": "A sensor uncertainty can be defined for the platform. The 'unit' field will complete the information.",
+	"Level": "O",
+	"References": "",
+	"Argo": "",
+	"Glider": "",
+	"OceanSITES": "",
+	"SOT": "Sensor uncertainty"
+},
+{
 	"OceanOPS metadata": "Data link URL",
 	"Database": "PTF_VARIABLE.WEBLINK.url",
 	"Format": "URL formatted text",
@@ -226,10 +240,10 @@
 {
 	"OceanOPS metadata": "Sensor side indicator",
 	"Database": "PTF_VARIABLE.side_indicator",
-	"Format": "Values ('starboard','port')",
+	"Format": "Values ('port', 'starboard', 'centre')",
 	"Match": "n/a",
 	"CSV field": "VARIABLES SIDE INDICATOR",
-	"Comment": "Position of the sensor on the platform / ship: Port / Starboard",
+	"Comment": "Position of the sensor on the platform / ship: Port / Starboard / Centre",
 	"Level": "O",
 	"References": "",
 	"Argo": "",
