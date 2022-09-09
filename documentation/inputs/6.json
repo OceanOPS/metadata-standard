@@ -431,7 +431,7 @@
 	"Argo": "",
 	"Glider": "Not available",
 	"OceanSITES": "",
-	"SOT": "Main device version number"
+	"SOT": ""
 },
 {
 	"OceanOPS metadata": "Firmware Bluetooth ID",
@@ -515,7 +515,7 @@
 	"Argo": "N/A (firmware_version?)",
 	"Glider": "FIRMWARE_VERSION_NAVIGATION and FIRMWARE_VERSION_SCIENCE",
 	"OceanSITES": "",
-	"SOT": ""
+	"SOT": "Version number main device"
 },
 {
 	"OceanOPS metadata": "Software type",
