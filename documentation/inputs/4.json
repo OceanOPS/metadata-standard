@@ -116,7 +116,7 @@
 	"Database": "PTF.PTF_DEPLOYMENT.depl_height",
 	"Format": "Decimal NUMBER(7,1)",
 	"Match": "n/a",
-	"CSV field": "No",
+	"CSV field": "DEPLOYMENT HEIGHT",
 	"Comment": "Elevation, in metres, of the deployed element above the sea level",
 	"Level": "O",
 	"References": "",

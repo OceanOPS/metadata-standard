@@ -999,6 +999,16 @@
 						For now, most of the groups submit their files on-line, in different formats, while the web interface allows to do code tables mapping and secure several metadata on the fly (e.g., unique ship or sensor model), with the capability of processing a batch of files or platforms.
 					</p>
 					<p>
+						Sensor models / variables and all their metadata (start date, end date, serial number, height/depth, etc.) can also be processed using a secondary file. 
+						There is one prerequisite for uploading such a secondary file: the platform must already exist in the OceanOPS database 
+						(the OceanOPS platform reference will be the mapping key). 
+						The advantage of this file is that the sensor / variable information is displayed as a table and is therefore easily readable and editable by contributors. 
+						A demonstration file is available here: 
+						<ul>
+							<li><a target= "_blank" href="demo_files\csv_sensors_demo.csv">CSV sensors demo file</a></li>
+						</ul>
+					</p>
+					<p>
 						Several OCG networks have developed a complete data flow, including metadata, meeting OceanOPS requirements fully or partially. Some other networks rely on OceanOPS to manage their full set of metadata (e.g., VOS).
 					</p>
 					<br>
@@ -1579,15 +1589,27 @@
 					<div class="table-responsive tableFixHead" id="table-5" style="display: none;">
 						<table class="table table-striped table-bordered border-light table-sm caption-top">
 							<caption>
+								<p>
 								In order to handle multiple sensor information, every information describing the sensors/variables are organised into sub-cell within a CSV value. 
 								All values must contain the same number of sub-cells and respecting the same order, including empty ones.
 								For example, if a record contains three sensors and serial numbers for the first and second, the CSV file should be filled as follows: 
 								SENSOR_MODELS = "SENSOR1,SENSOR2,SENSOR3", SENSOR_SERIALS = "SERIAL1,,SERIAL3".
-								<br/>
+								</p>
+								<p>
 								A sensor information will indicate that the record is able to measure all the default variables linked to that sensor model.
 								If the sensor is not measuring all the default variables or a per-variable customization is required, sub-cells must be repeated for each specified variables. 
 								The example above, with "SENSOR1" being customized for two variables, would become:
 								SENSOR_MODELS = "VARIABLE1:SENSOR1,VARIABLE2:SENSOR1,SENSOR2,SENSOR3", SENSOR_SERIALS = "SERIAL1,SERIAL1,,SERIAL3".
+								</p>
+								<p>
+								To handle the sensor / variable information in a readable way, a secondary file with all sensor / variable metadata can be uploaded. 
+								In this secondary file, the sensor information is displayed as a table, with the OceanOPS platform “REF” column (mandatory), 
+								then one column for each sensor metadata (sensor models / variables, start date, heigh/depth, etc.) and an additional column "CSV SENSORS" (mandatory). 
+								This last column remains empty and is the key for the upload tool to detect the format of the file. 
+								The file will contain one line by sensor model / variable installed on the platform. 
+								<br/>
+								With this secondary file, the principle of customization by variable is the same as described above. 
+								</p>
 							</caption>
 							<thead>
 								<tr>
@@ -1643,9 +1665,26 @@
 			
 				<h2 class="title-border-bottom">FAQ - How to</h2>				
 				<div class="container-fluid">
-					<p>
-					<br>
-					 ...
+					<h3>How to submit sensor metadata as a table?</h3>
+						<p>
+						All platform metadata can be submitted via a single csv file, including sensor information organized in sub-cells in a CSV value. 
+						Depending on the type of platform, each sensor metadata cell may contain many sub-cells, and it can be difficult for users to read and manage this information, especially if the file is prepared manually. 
+						</p>
+						<p>
+						To make the sensor metadata management easier, the user can also upload secondary files with all the sensor information, displayed as a table. Here are some details about these secondary files:  
+						</p>
+						<ul>
+							<li><p>The platform needs to exist in the OceanOPS database</p></li>
+							<li><p>The mandatory columns are: </p></li>
+								<ul>
+									<li><p>The OceanOPS REF of the platform</p></li>
+									<li><p>A "CSV SENSORS" column which will remain empty, but allows the upload tool to identify the format of the input file (the upload tool is the same for files containing all the platform metadata and for secondary sensor files)</p></li>
+								</ul>
+							<li><p>All sensor metadata can be processed via this file (sensor models / variables, start date, end date, calibration date, next calibration date, height/depth, etc.)</p></li>
+							<li><p>In the file, there will be as many lines as there are sensors/variables installed on the platform</p></li>
+							<li><p>Several OceanOPS platforms can be managed in one file (identified with the REF)</p></li>	
+						</ul>	
+					 
 					<br>
 					<br>
 					</p>
