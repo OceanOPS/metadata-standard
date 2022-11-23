@@ -1,0 +1,267 @@
+PTF FAMILY;PTF TYPE;PTF MODEL;AGENCY
+Animal Borne Sensor;MEOP-CTD;Crabeater seal;
+Animal Borne Sensor;MEOP-CTD;CTD-SRDL;
+Animal Borne Sensor;MEOP-CTD;TEST;
+Atmospheric Profiler;ASAP;OT ASAP;
+Atmospheric Profiler;ASAP DIS;DIS - Built-in semi automatic launcher;
+Atmospheric Profiler;ASAP DIS;DIS - Fixed manual deck launcher;
+Atmospheric Profiler;ASAP DIS;DIS - Free hand launches;
+Atmospheric Profiler;ASAP DIS;DIS - Generic;
+Atmospheric Profiler;ASAP DIS;DIS - Portable manual deck launcher;
+Atmospheric Profiler;ASAP DIS;DIS - Semi automatic 10ft container launcher;
+Atmospheric Profiler;ASAP DIS;DIS - Semi automatic 20ft container launcher;
+Atmospheric Profiler;ASAP INT;INT - Built-in semi automatic launcher;
+Atmospheric Profiler;ASAP INT;INT - Fixed manual deck launcher;
+Atmospheric Profiler;ASAP INT;INT - Portable manual deck launcher;
+Atmospheric Profiler;ASAP INT;INT - Semi automatic 10ft container launcher;
+Atmospheric Profiler;ASAP INT;INT - Semi automatic 20ft container launcher;
+Drifting Buoy;DAVIS;DAVIS_METOCEAN;Fisheries and Oceans Canada
+Drifting Buoy;DB CARBON;DB CARBON;
+Drifting Buoy;DB POLLUTION;Pollution Tracker;
+Drifting Buoy;DB SHALLOW;SHALDRIFT;
+Drifting Buoy;DWS;DWS;
+Drifting Buoy;DWS;DWS-B;
+Drifting Buoy;ECHNOC;ECHNOC;
+Drifting Buoy;SVP;ADOS;
+Drifting Buoy;SVP;ADOS_HR;
+Drifting Buoy;SVP;ADOS_SAL;
+Drifting Buoy;SVP;MiniMet;
+Drifting Buoy;SVP;SC40;NKE Instrumentation
+Drifting Buoy;SVP;SOFAR;
+Drifting Buoy;SVP;Spot tracer;
+Drifting Buoy;SVP;SVP;
+Drifting Buoy;SVP;SVP B;Scripps Institution of Oceanography 
+Drifting Buoy;SVP;SVP B DBi;
+Drifting Buoy;SVP;SVP B MetOcean;
+Drifting Buoy;SVP;SVP B Pacific Gyre;
+Drifting Buoy;SVP;SVP B SIO;
+Drifting Buoy;SVP;SVP BW;
+Drifting Buoy;SVP;SVP Clearwater;Clearwater Instrumentation
+Drifting Buoy;SVP;SVP DBi;Data Buoy Instrumentation, LLC
+Drifting Buoy;SVP;SVP JVC-KENWOOD;
+Drifting Buoy;SVP;SVP Marlin-Yug;MARLIN-YUG
+Drifting Buoy;SVP;SVP MetOcean;METOCEAN Data Systems
+Drifting Buoy;SVP;SVP Pacific Gyre;Pacific Gyre
+Drifting Buoy;SVP;SVP SIO;Scripps Institution of Oceanography 
+Drifting Buoy;SVP;SVP Technocean;Technocean, Inc.
+Drifting Buoy;SVP;SVP_BRST;NKE Instrumentation
+Drifting Buoy;SVP;SVPBSC NKE;
+Drifting Buoy;SVP;SVPBx MetOcean;
+Drifting Buoy;SVP;SVP_CICESE_MX;
+Drifting Buoy;SVP;SVP_GDC;
+Drifting Buoy;SVP;SVP_INPE;
+Drifting Buoy;SVP;SVP_KORDI;
+Drifting Buoy;SVP;SVP_NEURON_ELECTRONICS;
+Drifting Buoy;SVP;SVP_NIO_RA;
+Drifting Buoy;SVP;SVP-S;
+Drifting Buoy;SVP;SVP_SEIMAC;
+Drifting Buoy;SVP;SVP_SERPE_IESM;
+Drifting Buoy;SVP;SVP_TOYOCOM;
+Drifting Buoy;SVP;SVP_TURO_TECH;
+Fishing Vessel Probes;Fixed Fishing Vessels Probes;Longline Probes;
+Fishing Vessel Probes;Fixed Fishing Vessels Probes;Set Gillnet/Fyke Net Probes;
+Fishing Vessel Probes;Fixed Fishing Vessels Probes;Traps/Pots Probes;
+Fishing Vessel Probes;Mobile Fishing Vessel Probes;Beam Trawler Probes;
+Fishing Vessel Probes;Mobile Fishing Vessel Probes;Bottom Trawler Probes;
+Fishing Vessel Probes;Mobile Fishing Vessel Probes;Dredge Probes;
+Fishing Vessel Probes;Mobile Fishing Vessel Probes;Trolling Probes;
+Fixed Station;Fixed Station;CB-450;NexSens Technology
+Fixed Station;Fixed Station;CMAN;
+Fixed Station;Fixed Station;Light vessel;
+Fixed Station;Fixed Station;Oil and Gas platforms;
+Fixed Station;Fixed Station;Other Fixed Platform;
+Fixed Station;HF Radar;CODAR;CODAR Ocean Sensors Ltd
+Fixed Station;HF Radar;GENERIC HF Radar;
+Fixed Station;HF Radar;LERA;
+Fixed Station;HF Radar;SeaSonde;
+Fixed Station;HF Radar;WERA;
+Fixed Station;Tide Gauge;Tide Gauge;
+Ice Buoy;Ice Buoy;AXIB;
+Ice Buoy;Ice Buoy;CALIB;
+Ice Buoy;Ice Buoy;ICE BALL;
+Ice Buoy;Ice Buoy;ICE BEACON;
+Ice Buoy;Ice Buoy;ICE CANISTER;
+Ice Buoy;Ice Buoy;ICE PLATFORM;
+Ice Buoy;Ice Buoy;ICE TETHERED PROFILE;
+Ice Buoy;Ice Buoy;ICE TRACKER;
+Ice Buoy;Ice Buoy;ICE TRACKER WITH BAROMETRIC PRESSURE;
+Ice Buoy;Ice Buoy;ICEPELICAN;
+Ice Buoy;Ice Buoy;iceST-B/40;
+Ice Buoy;Ice Buoy;iceST-B/41;
+Ice Buoy;Ice Buoy;ICEX;
+Ice Buoy;Ice Buoy;IMB;
+Ice Buoy;Ice Buoy;JCAD;
+Ice Buoy;Ice Buoy;O-Buoy;
+Ice Buoy;Ice Buoy;Other Ice Buoy;
+Ice Buoy;Ice Buoy;PAWS;
+Ice Buoy;Ice Buoy;POLAR SVP;
+Ice Buoy;Ice Buoy;POPs;
+Ice Buoy;Ice Buoy;SIDEKICK;
+Ice Buoy;Ice Buoy;SIMB;
+Ice Buoy;Ice Buoy;SNOW BUOY;
+Ice Buoy;Ice Buoy;UNIVERSAL TRACKER;
+Ice Buoy;Ice Buoy;UpTempO;
+Ice Buoy;SPOT POLAR ICE TRACKER;Spot Polar Ice Tracker;
+Moored Buoy;Meteorological Moored Buoy;Discus-10;
+Moored Buoy;Meteorological Moored Buoy;Discus-3;
+Moored Buoy;Meteorological Moored Buoy;Meteo mooring;
+Moored Buoy;Meteorological Moored Buoy;Moored Buoy;
+Moored Buoy;Meteorological Moored Buoy;OCEAN3;
+Moored Buoy;Meteorological Moored Buoy;Other Met Moored Buoy;
+Moored Buoy;Surface Moored Buoy;OceanSITES Surface;
+Moored Buoy;Tropical Moored Buoy;ATLAS;
+Moored Buoy;Tropical Moored Buoy;ATLAS_NEXT;
+Moored Buoy;Tropical Moored Buoy;OTHER_TROPICAL;
+Moored Buoy;Tropical Moored Buoy;PIRATA;
+Moored Buoy;Tropical Moored Buoy;RAMA;
+Moored Buoy;Tropical Moored Buoy;TAO_REFRESH;
+Moored Buoy;Tropical Moored Buoy;T_FLEX;
+Moored Buoy;Tropical Moored Buoy;TRITON;
+Moored Buoy;Tsunameter Buoy;DART;
+Moored Buoy;Tsunameter Buoy;DART_II;
+Moored Buoy;Tsunameter Buoy;Other Tsunameter Buoy;
+Moored Buoy;Wave Moored Buoy;Datawell;
+Moored Buoy;Wave Moored Buoy;Other Wave Buoy;
+Moored Buoy;Wave Moored Buoy;SEAWATCH;
+Moored Buoy;Wave Moored Buoy;SEAWATCH-MINI;
+Moored Buoy;Wave Moored Buoy;SMART-820;
+Moored Buoy;Wave Moored Buoy;WAVEBUOY;
+Moored Buoy;Wave Moored Buoy;WAVESCAN;
+Mooring;Benthic Mooring;Benthic Mooring Custom;
+Mooring;Mooring;CABLED_OBSERVATORY;
+Mooring;Mooring;Mooring Custom;
+Mooring;Mooring;Sound Source Mooring;
+Mooring;Subsurface Mooring;Subsurface Mooring Custom;
+Ship Weather Station;VOS Automatic Weather Station;AEMET SYSTEM;
+Ship Weather Station;VOS Automatic Weather Station;AMOS;UK Meteorological Office
+Ship Weather Station;VOS Automatic Weather Station;AMOS2X;
+Ship Weather Station;VOS Automatic Weather Station;AVOS;Axys Technologies, Inc.
+Ship Weather Station;VOS Automatic Weather Station;AWS430;VAISALA
+Ship Weather Station;VOS Automatic Weather Station;BAROS;Meteo France
+Ship Weather Station;VOS Automatic Weather Station;BATOS;Meteo France
+Ship Weather Station;VOS Automatic Weather Station;CES SYSTEM;
+Ship Weather Station;VOS Automatic Weather Station;DBI DECK DRIFTER;
+Ship Weather Station;VOS Automatic Weather Station;EUCAWS/NEPTUNE;STERELA
+Ship Weather Station;VOS Automatic Weather Station;FUGRO SYSTEM;
+Ship Weather Station;VOS Automatic Weather Station;GENERIC AUTO;
+Ship Weather Station;VOS Automatic Weather Station;KM BLUE INSIGHT;KONGSBERG
+Ship Weather Station;VOS Automatic Weather Station;KMA SYSTEM;
+Ship Weather Station;VOS Automatic Weather Station;MAWS 410;VAISALA
+Ship Weather Station;VOS Automatic Weather Station;MERCURY;STERELA
+Ship Weather Station;VOS Automatic Weather Station;MET SERVICE NZ SYSTEM;Sutron Corporation
+Ship Weather Station;VOS Automatic Weather Station;METNO SYSTEM;NORWEGIAN METEOROLOGICAL INSTITUTE
+Ship Weather Station;VOS Automatic Weather Station;METOCEAN DECK DRIFTER;METOCEAN Data Systems
+Ship Weather Station;VOS Automatic Weather Station;MetOcean Deck Drifter;METOCEAN Data Systems
+Ship Weather Station;VOS Automatic Weather Station;MICHELSON;CHRISTIAN MICHELSEN RESEARCH A/S
+Ship Weather Station;VOS Automatic Weather Station;MILOS 500 - DWDGFSF;VAISALA
+Ship Weather Station;VOS Automatic Weather Station;MILOS 500 - YOURLINK;VAISALA
+Ship Weather Station;VOS Automatic Weather Station;MILOS 520;VAISALA
+Ship Weather Station;VOS Automatic Weather Station;MINOS;SERPE IESM
+Ship Weather Station;VOS Automatic Weather Station;MIROS;MIROS
+Ship Weather Station;VOS Automatic Weather Station;MSTARSHIP;METEOROLOGICAL SERVICE OF NEW ZEALAND LTD
+Ship Weather Station;VOS Automatic Weather Station;OSC SYSTEM;
+Ship Weather Station;VOS Automatic Weather Station;POLARSTERN SYSTEM;Alfred Wegener Institute for Polar and Marine Research
+Ship Weather Station;VOS Automatic Weather Station;SEAS AUTOIMET;National Oceanic and Atmospheric Administation
+Ship Weather Station;VOS Automatic Weather Station;TECHSAS;
+Ship Weather Station;VOS Automatic Weather Station;TURBOWIN+ AUTO;Royal Netherlands Meteorological Institute
+Ship Weather Station;VOS Manual Weather Station;AMVERS/SEAS;National Oceanic and Atmospheric Administation
+Ship Weather Station;VOS Manual Weather Station;C5-SAM;Coastal Environmental Systems
+Ship Weather Station;VOS Manual Weather Station;DMAWDS;National Oceanic and Atmospheric Administation
+Ship Weather Station;VOS Manual Weather Station;GENERIC MANUAL;
+Ship Weather Station;VOS Manual Weather Station;OBSJMA;Japan Meteorological Agency
+Ship Weather Station;VOS Manual Weather Station;TURBOWEB;Royal Netherlands Meteorological Institute
+Ship Weather Station;VOS Manual Weather Station;TURBOWIN;Royal Netherlands Meteorological Institute
+Ship Weather Station;VOS Manual Weather Station;TURBOWIN+ MANUAL;Royal Netherlands Meteorological Institute
+Shipboard CTD;CTD_ROSETTE;SBE911_P;
+Subsurface Profiler;Float;ALAMO;MRV Systems
+Subsurface Profiler;Float;ALTO;MRV Systems
+Subsurface Profiler;Float;APEX;Teledyne RD Instruments
+Subsurface Profiler;Float;APEX_EM;Teledyne RD Instruments
+Subsurface Profiler;Float;ARVOR;NKE Instrumentation
+Subsurface Profiler;Float;ARVOR_L;NKE Instrumentation
+Subsurface Profiler;Float;COPEX;
+Subsurface Profiler;Float;FLOAT;UNKNOWN AGENCY
+Subsurface Profiler;Float;HM2000;Qingdao Hisun Ocean Equipment Corporation Limited
+Subsurface Profiler;Float;HM4000;Qingdao Hisun Ocean Equipment Corporation Limited
+Subsurface Profiler;Float;NAVIS_A;Sea-Bird Electronics, Inc.
+Subsurface Profiler;Float;Navis_BGC;Sea-Bird Electronics, Inc.
+Subsurface Profiler;Float;NAVIS_EBR;Sea-Bird Electronics, Inc.
+Subsurface Profiler;Float;NEMO;OPTIMARE Sensorsysteme AG
+Subsurface Profiler;Float;NINJA;TSURUMI-SEIKI CO., LTD
+Subsurface Profiler;Float;NOVA;METOCEAN Data Systems
+Subsurface Profiler;Float;PALACE;Teledyne RD Instruments
+Subsurface Profiler;Float;PROVOR;NKE Instrumentation
+Subsurface Profiler;Float;PROVOR_II;NKE Instrumentation
+Subsurface Profiler;Float;PROVOR_III;NKE Instrumentation
+Subsurface Profiler;Float;PROVOR_III - Jumbo;
+Subsurface Profiler;Float;PROVOR_IV;NKE Instrumentation
+Subsurface Profiler;Float;PROVOR_MT;METOCEAN Data Systems
+Subsurface Profiler;Float;PROVOR_V;
+Subsurface Profiler;Float;SOLO;Scripps Institution of Oceanography 
+Subsurface Profiler;Float;SOLO_BGC;Scripps Institution of Oceanography 
+Subsurface Profiler;Float;SOLO_BGC_MRV;MRV Systems
+Subsurface Profiler;Float;SOLO_II;Scripps Institution of Oceanography 
+Subsurface Profiler;Float;SOLO_W;Woods Hole Oceanographic Institution
+Subsurface Profiler;Float;S2A;MRV Systems
+Subsurface Profiler;Float;S2X;MRV Systems
+Subsurface Profiler;Float Coastal;ARVOR_C;NKE Instrumentation
+Subsurface Profiler;Float Deep;APEX_D;Teledyne RD Instruments
+Subsurface Profiler;Float Deep;ARVOR_D;NKE Instrumentation
+Subsurface Profiler;Float Deep;NINJA_D;TSURUMI-SEIKI CO., LTD
+Subsurface Profiler;Float Deep;SOLO_D;Scripps Institution of Oceanography 
+Subsurface Profiler;Float Deep;SOLO_D_MRV;MRV Systems
+Subsurface Profiler;Float Deep;XUANWU;Qingdao Hisun Ocean Equipment Corporation Limited
+Subsurface Profiler;Glider;Seaexplorer;IMEV - ALSEAMAR
+Subsurface Profiler;Glider;Seaglider;KONGSBERG
+Subsurface Profiler;Glider;Seaglider 1KA;KONGSBERG
+Subsurface Profiler;Glider;Slocum;Teledyne RD Instruments
+Subsurface Profiler;Glider;Slocum G1;Teledyne RD Instruments
+Subsurface Profiler;Glider;Slocum G2;Teledyne RD Instruments
+Subsurface Profiler;Glider;Slocum G3;Teledyne RD Instruments
+Subsurface Profiler;Glider;Slocum thermal;
+Subsurface Profiler;Glider;Spray;Bluefin Robotics
+Subsurface Profiler;Glider Coastal;Seaglider C2;KONGSBERG
+Subsurface Profiler;Glider Coastal;Slocum coastal;Teledyne RD Instruments
+Subsurface Profiler;Glider Coastal;Slocum coastal G1 ;
+Subsurface Profiler;Glider Coastal;Slocum coastal G2;
+Subsurface Profiler;Glider Coastal;Slocum coastal G3;
+Subsurface Profiler;Glider Coastal;Spray coastal;Bluefin Robotics
+Subsurface Profiler;Glider Deep;DeepExplorer;IMEV - ALSEAMAR
+Subsurface Profiler;Glider Deep;Seaglider M6;KONGSBERG
+Subsurface Profiler;Ice Tethered Profiler;ITP;Woods Hole Oceanographic Institution
+Subsurface Profiler;Polar Ocean Profiling System;POPS_NEMO;OPTIMARE Sensorsysteme AG
+Subsurface Profiler;Polar Ocean Profiling System;POPS_NOVA;METOCEAN Data Systems
+Subsurface Profiler;Polar Ocean Profiling System;POPS_PROVOR;NKE Instrumentation
+Subsurface Profiler;XBT;Devil;Turo Technology Pty. Ltd.
+Subsurface Profiler;XBT;LMC-16 DAQ;SIPPICAN
+Subsurface Profiler;XBT;MK21 Ethernet DAQ;SIPPICAN
+Subsurface Profiler;XBT;MK21 ISA;SIPPICAN
+Subsurface Profiler;XBT;MK21 USB DAQ;SIPPICAN
+Subsurface Profiler;XBT;Quoll;Turo Technology Pty. Ltd.
+Subsurface Profiler;XBT;1 - LM-2A Deck-mounted;
+Subsurface Profiler;XBT;100 - MFSTEP Autolauncher;
+Subsurface Profiler;XBT;2 - LM-3A Hand-Held;
+Subsurface Profiler;XBT;20 - SIO XBT Autolauncher;
+Subsurface Profiler;XBT;3 - LM-4A Thru-Hull;
+Subsurface Profiler;XBT;30 - AOML XBT V6 Autolauncher;
+Subsurface Profiler;XBT;31 - AOML XBT V8.0 Autolauncher;
+Subsurface Profiler;XBT;32 - AOML XBT V8.1 Autolauncher;
+Subsurface Profiler;XBT;4 - AL-12 TSK Autolauncher;
+Subsurface Profiler;XBT;90 - CSIRO Devil Autolauncher;
+Underway System;TSG;GENERIC TSG;
+Underway System;TSG;SBE 21 SeaCAT Thermosalinograph;Sea-Bird Electronics, Inc.
+Underway System;TSG;SBE 38 Digital Oceanographic Thermometer;Sea-Bird Electronics, Inc.
+Underway System;TSG;SBE 45 Micro TSG Thermosalinograph;Sea-Bird Electronics, Inc.
+Underway System;TSG;SBE 48 Hull Temperature Sensor;Sea-Bird Electronics, Inc.
+Unmanned Surface Vehicle;SailBuoy;SailBuoy;
+Unmanned Surface Vehicle;Sailing Drone;SAILDRONE;
+Unmanned Surface Vehicle;Wave Glider;WAVEGLIDER;
+;;AXIS_Autolauncher;
+;;FYF AUTO OBS;HONEYWELL
+;;INTERLAKE SYSTEM;Interlake
+;;KOAC 7800;KOSHIN DENKI
+;;NIMOS;ICON SOFTWARE
+;;NOAA_AOML_Autolauncher;
+;;PACE;MUIR MATHESON LTD
+;;PROVOR_V - Jumbo;
+;;0 - XBT Launcher;
