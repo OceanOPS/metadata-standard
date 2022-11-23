@@ -183,11 +183,11 @@ Subsurface Profiler,Float,COPEX,
 Subsurface Profiler,Float,FLOAT,UNKNOWN AGENCY
 Subsurface Profiler,Float,HM2000,Qingdao Hisun Ocean Equipment Corporation Limited
 Subsurface Profiler,Float,HM4000,Qingdao Hisun Ocean Equipment Corporation Limited
-Subsurface Profiler,Float,NAVIS_A,Sea-Bird Electronics, Inc.
-Subsurface Profiler,Float,Navis_BGC,Sea-Bird Electronics, Inc.
-Subsurface Profiler,Float,NAVIS_EBR,Sea-Bird Electronics, Inc.
+Subsurface Profiler,Float,NAVIS_A,"Sea-Bird Electronics, Inc."
+Subsurface Profiler,Float,Navis_BGC,"Sea-Bird Electronics, Inc."
+Subsurface Profiler,Float,NAVIS_EBR,"Sea-Bird Electronics, Inc."
 Subsurface Profiler,Float,NEMO,OPTIMARE Sensorsysteme AG
-Subsurface Profiler,Float,NINJA,TSURUMI-SEIKI CO., LTD
+Subsurface Profiler,Float,NINJA,"TSURUMI-SEIKI CO., LTD"
 Subsurface Profiler,Float,NOVA,METOCEAN Data Systems
 Subsurface Profiler,Float,PALACE,Teledyne RD Instruments
 Subsurface Profiler,Float,PROVOR,NKE Instrumentation
