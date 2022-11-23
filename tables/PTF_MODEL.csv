@@ -207,7 +207,7 @@ Subsurface Profiler,Float,S2X,MRV Systems
 Subsurface Profiler,Float Coastal,ARVOR_C,NKE Instrumentation
 Subsurface Profiler,Float Deep,APEX_D,Teledyne RD Instruments
 Subsurface Profiler,Float Deep,ARVOR_D,NKE Instrumentation
-Subsurface Profiler,Float Deep,NINJA_D,TSURUMI-SEIKI CO., LTD
+Subsurface Profiler,Float Deep,NINJA_D,"TSURUMI-SEIKI CO., LTD"
 Subsurface Profiler,Float Deep,SOLO_D,Scripps Institution of Oceanography 
 Subsurface Profiler,Float Deep,SOLO_D_MRV,MRV Systems
 Subsurface Profiler,Float Deep,XUANWU,Qingdao Hisun Ocean Equipment Corporation Limited
@@ -249,10 +249,10 @@ Subsurface Profiler,XBT,32 - AOML XBT V8.1 Autolauncher,
 Subsurface Profiler,XBT,4 - AL-12 TSK Autolauncher,
 Subsurface Profiler,XBT,90 - CSIRO Devil Autolauncher,
 Underway System,TSG,GENERIC TSG,
-Underway System,TSG,SBE 21 SeaCAT Thermosalinograph,Sea-Bird Electronics, Inc.
-Underway System,TSG,SBE 38 Digital Oceanographic Thermometer,Sea-Bird Electronics, Inc.
-Underway System,TSG,SBE 45 Micro TSG Thermosalinograph,Sea-Bird Electronics, Inc.
-Underway System,TSG,SBE 48 Hull Temperature Sensor,Sea-Bird Electronics, Inc.
+Underway System,TSG,SBE 21 SeaCAT Thermosalinograph,"Sea-Bird Electronics, Inc."
+Underway System,TSG,SBE 38 Digital Oceanographic Thermometer,"Sea-Bird Electronics, Inc."
+Underway System,TSG,SBE 45 Micro TSG Thermosalinograph,"Sea-Bird Electronics, Inc."
+Underway System,TSG,SBE 48 Hull Temperature Sensor,"Sea-Bird Electronics, Inc."
 Unmanned Surface Vehicle,SailBuoy,SailBuoy,
 Unmanned Surface Vehicle,Sailing Drone,SAILDRONE,
 Unmanned Surface Vehicle,Wave Glider,WAVEGLIDER,
